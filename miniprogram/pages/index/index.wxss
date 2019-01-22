@@ -1,0 +1,15 @@
+view{font-size: 12px;}
+
+#address_view{width: 100%;margin-bottom: 20px;}
+#address_view label{ border:1px solid #48C23D;width:34.5%;height: 25px;line-height: 25px; float: left;margin-left: 10% }
+
+#data_view{margin:0 auto 20px;}
+#data_view .picker{position: relative;top:-13px;left: 60px;}
+
+#crowd_view{margin-bottom: 20px;}
+
+#btn_view{margin-bottom: 20px;}
+
+#list_view{width: 90%;padding:0 5%}
+#list_view .list_item{margin-bottom: 10px;border-bottom: 1px solid #48C23D;}
+#list_view .list_item view{margin-bottom: 5px;}
