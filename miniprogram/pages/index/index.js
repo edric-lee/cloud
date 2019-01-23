@@ -9,7 +9,7 @@ Page({
     confirmText: '', //提示框提示内容
     crowdText: 'ADULT', //普通或学生的参数值
 
-    startName: '出发站',
+    startName: '南宁东',
     startCode: '',
 
     endName: '目的站',
@@ -23,7 +23,7 @@ Page({
   },
   gotosearch1: function () {
     wx.navigateTo({
-      url: '../search1/search1'
+      url: '../trainStation/trainStation'
     })
   },
   gotosearch2: function () {
@@ -122,12 +122,14 @@ Page({
   onLoad: function () {
     var code1 = wx.getStorageSync('startCode');
     var name1 = wx.getStorageSync('startName');
-    if (code1 && name1) {
+    console.log("startName:",code1,name1);
+    if (name1) {
       this.setData({ startCode: code1 });
       this.setData({ startName: name1 });
     }
     var code2 = wx.getStorageSync('endCode');
     var name2 = wx.getStorageSync('endName');
+    console.log("endName:",code2,name2);
     if (code2 && name2) {
       this.setData({ endCode: code2 });
       this.setData({ endName: name2 });

@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
@@ -45,7 +45,26 @@
 				{
 					"id": -1,
 					"name": "demo",
-					"pathName": "pages/demo/demo"
+					"pathName": "pages/demo/demo",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "train",
+					"pathName": "pages/train/train",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "train",
+					"pathName": "pages/home/home",
+					"query": ""
 				}
 			]
 		}

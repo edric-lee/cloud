@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
   <view id="address_view">
-    <label bindtap="gotosearch1" data-code="{{startCode}}">{{startName}}</label>
+    <label bindtap="gotosearch1" data-code="{{startName}}">{{startName}}</label>
     <label bindtap="gotosearch2" data-code="{{endCode}}">{{endName}}</label>
   </view>
   <view id="data_view" data-date="{{selectDate}}">

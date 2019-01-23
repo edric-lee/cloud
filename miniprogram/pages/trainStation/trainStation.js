@@ -1,6 +1,6 @@
 // pages/demo/demo.js
 let City = require('../../utils/allcity.js');
-
+var app = getApp()
 Page({
 
   data: {
@@ -27,7 +27,11 @@ Page({
 
   },
   bindtap(e) {
-    console.log(e.detail)
+    wx.setStorageSync('startName',e.target.name);
+    wx.navigateTo({
+      url: '../index/index'
+    })
+    console.log(e.detail.name)
   },
-
+  //点击选中
 })
