@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/http/http",
     "pages/search1/search1",
-    "pages/search2/search2"
+    "pages/search2/search2",
+    "pages/home/home",
+    "pages/demo/demo"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
