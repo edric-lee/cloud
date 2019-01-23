@@ -1,5 +1,5 @@
 // pages/demo/demo.js
-let City = require('../../utils/trainStation.js');
+let City = require('../../utils/airport.js');
 var app = getApp()
 Page({
 

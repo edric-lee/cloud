@@ -1,21 +1,40 @@
 <!--index.wxml-->
 <view class="container">
-  <view id="address_view">
-    <label bindtap="gotosearch1" data-code="{{startName}}">{{startName}}</label>
-    <label bindtap="gotosearch2" data-code="{{endCode}}">{{endName}}</label>
-  </view>
-  <view id="data_view" data-date="{{selectDate}}">
-    选择日期：
-    <picker bindchange="bindPickerChange" value="{{dateIndex}}" range="{{dateList}}">
-      {{selectDate}}
+  <view class="section" style="background:#787878;margin:20rpx;padding:20rpx">
+    <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+      <view class="picker">
+        日期: {{date}}
+      </view>
     </picker>
   </view>
-  <view id="crowd_view">
-    <radio-group bindchange="radioChange">
-      <label><radio value="ADULT" checked="true" /> 普通 </label> 
-      <label><radio value="0X00" /> 学生 </label>
-    </radio-group>
+  <view id="address_view">
+    <label bindtap="gotoStartTrainStation" data-code="{{startName}}">{{startName}}</label>
+    <label bindtap="gotoEndTrainStation" data-code="{{endName}}">{{endName}}</label>
   </view>
+
+  <view id="btn_view" bindtap="bindBtnTap">
+    <button>查 询</button>
+  </view>
+  <view>
+    <modal confirm-text="确定" hidden="{{modalHidden}}" bindconfirm="modalChange" no-cancel="true">
+      {{confirmText}}
+    </modal>
+  </view>
+</view>
+
+<view class="container">
+  <view class="section" style="background:#787878;margin:20rpx;padding:20rpx">
+    <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+      <view class="picker">
+        日期: {{date}}
+      </view>
+    </picker>
+  </view>
+  <view id="address_view">
+    <label bindtap="gotoStartAirport" data-code="{{startName}}">{{startName}}</label>
+    <label bindtap="gotoEndAirport" data-code="{{endName}}">{{endName}}</label>
+  </view>
+
   <view id="btn_view" bindtap="bindBtnTap">
     <button>查 询</button>
   </view>

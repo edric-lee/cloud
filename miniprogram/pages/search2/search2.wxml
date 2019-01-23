@@ -1,8 +1,0 @@
-<view>
-    <view id="searchBox">
-        <input type="text" placeholder="搜索出发站" bindblur="change1" />
-    </view>
-  <view id="list_view">
-    <view wx:for="{{addressArray}}" wx:for-item="itemName" bindtap="bindSelect" data-code="{{itemName.code}}" data-name="{{itemName.name}}">{{itemName.name}}</view>
-  </view>
-</view>

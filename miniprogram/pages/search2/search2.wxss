@@ -1,7 +1,0 @@
-view{font-size: 12px;}
-
-#searchBox{width: 100%;}
-#searchBox input{width: 96%;border: 1px solid #48C23D;margin-left: 1%}
-
-#list_view{width: 100%;}
-#list_view view{width: 50%;margin-left: 2%;margin-top: 5px;}
