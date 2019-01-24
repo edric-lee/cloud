@@ -167,6 +167,51 @@ Page({
       console.log(mean);
     })
   },
+  bindBtnTapOldTrain: function (e) {
+    if (this.data.startName.length < 1) {
+      this.openModal('请输入出发站');
+      return;
+    }
+    if (this.data.endName.length < 1) {
+      this.openModal('请输入目的站');
+      return;
+    }
+    if (this.data.date.length < 1) {
+      this.openModal('请选择日期');
+      return;
+    }
+    var that = this;
+    wx.cloud.callFunction({ //调用云函数
+      name: 'http',
+      data: {
+        url: encodeURI("http://apis.haoservice.com/lifeservice/train/ypcx?key=e2cb23d7b39348fbb3121d4ec6bba895&date=" + that.data.date + "&from=" + wx.getStorageSync('startName') + "&to=" + wx.getStorageSync('endName') + "&paybyvas=false"),
+      }, //云函数名为http
+    }).then(res => {　　　　　　 //Promise
+      // console.log(JSON.parse(res.result).result);
+      var list = JSON.parse(res.result).result;
+      var arr = new Array();
+      var price = 0;
+      var max = 0;
+      console.log(list)
+      console.log(list.length)
+      for (var i in list) {
+        if (typeof list[i].ticketprice.A1 != 'undefined') {
+          var price = parseInt(list[i].ticketprice.A1.replace("￥", ""))
+          arr.push(price);
+        }
+      }
+      console.log(arr)
+      var max = Math.max.apply(Math, arr);
+      console.log(max)
+
+      var sum = 0;
+      for (var i = 0; i < arr.length; i++) {
+        sum += arr[i];
+      }
+      var mean = sum / arr.length;
+      console.log(mean);
+    })
+  },
   bindBtnTapAir: function (e) {
     if (this.data.startName.length < 1) {
       this.openModal('请输入出发站');
@@ -214,22 +259,7 @@ Page({
       var mean = sum / arr.length;
       console.log(mean);
 
-      // for (var i in list) {
-      //   if (typeof list[i].ticketprice.O != 'undefined') {
-      //     var price = parseInt(list[i].ticketprice.O.replace("￥", ""))
-      //     arr.push(price);
-      //   }
-      // }
-      // console.log(arr)
-      // var max = Math.max.apply(Math, arr);
-      // console.log(max)
-
-      // var sum = 0;
-      // for (var i = 0; i < arr.length; i++) {
-      //   sum += arr[i];
-      // }
-      // var mean = sum / arr.length;
-      // console.log(mean);
+      
     })
   },
 })

@@ -1,19 +1,25 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="section" style="background:#787878;margin:20rpx;padding:20rpx">
+<view class="container">动车
+<view class="title">
+<view class="text">出发时间</view></view>
+  <view class="section">
     <picker mode="date" value="{{date}}" bindchange="bindDateChangeTrain">
       <view class="picker">
-        日期: {{date}}
+        {{date}}
       </view>
     </picker>
   </view>
+  <view class="title">
+  <view class="text">出发城市</view>
+  <view class="text">到达城市</view>
+  </view>
   <view id="address_view">
-    <label bindtap="startTrainStation" data-code="{{startName}}">{{startName}}</label>
-    <label bindtap="endTrainStation" data-code="{{endName}}">{{endName}}</label>
+    <label style="text-align:left"  bindtap="startTrainStation" data-code="{{startName}}">{{startName}}</label>
+    <label style="text-align:right" bindtap="endTrainStation" data-code="{{endName}}">{{endName}}</label>
   </view>
 
-  <view id="btn_view" bindtap="bindBtnTapTrain">
-    <button>查 询</button>
+  <view class="btn_view" bindtap="bindBtnTapTrain">
+    查 询
   </view>
   <view>
     <modal confirm-text="确定" hidden="{{modalHidden}}" bindconfirm="modalChange" no-cancel="true">
@@ -22,21 +28,56 @@
   </view>
 </view>
 
-<view class="container">
-  <view class="section" style="background:#787878;margin:20rpx;padding:20rpx">
+<view class="container">飞机
+<view class="title">
+<view class="text">出发时间</view></view>
+  <view class="section" >
     <picker mode="date" value="{{date}}" bindchange="bindDateChangeAir">
       <view class="picker">
-        日期: {{date}}
+         {{date}}
       </view>
     </picker>
   </view>
+    <view class="title">
+  <view class="text">出发城市</view>
+  <view class="text">到达城市</view>
+  </view>
   <view id="address_view">
-    <label bindtap="startAirport" data-code="{{startName}}">{{startName}}</label>
-    <label bindtap="endAirport" data-code="{{endName}}">{{endName}}</label>
+    <label style="text-align:left" bindtap="startAirport" data-code="{{startName}}">{{startName}}</label>
+    <label  style="text-align:right" bindtap="endAirport" data-code="{{endName}}">{{endName}}</label>
   </view>
 
-  <view id="btn_view" bindtap="bindBtnTapAir">
-    <button>查 询</button>
+  <view class="btn_view" bindtap="bindBtnTapAir">
+查 询
+  </view>
+  <view>
+    <modal confirm-text="确定" hidden="{{modalHidden}}" bindconfirm="modalChange" no-cancel="true">
+      {{confirmText}}
+    </modal>
+  </view>
+</view>
+
+<view class="container">火车
+<view class="title">
+<view class="text">出发时间</view></view>
+  <view class="section" >
+    <picker mode="date" value="{{date}}" bindchange="bindDateChangeTrain">
+      <view class="picker">
+        {{date}}
+      </view>
+    </picker>
+  </view>
+    <view class="title">
+  <view class="text">出发城市</view>
+  <view class="text">到达城市</view>
+  </view>
+  <view id="address_view">
+    <label style="text-align:left" bindtap="startTrainStation" data-code="{{startName}}">{{startName}}</label>
+    <label style="text-align:right" bindtap="endTrainStation" data-code="{{endName}}">{{endName}}</label>
+  </view>
+
+  <view class="btn_view" bindtap="bindBtnTapOldTrain">
+    查 询
   </view>
   <view>
     <modal confirm-text="确定" hidden="{{modalHidden}}" bindconfirm="modalChange" no-cancel="true">
