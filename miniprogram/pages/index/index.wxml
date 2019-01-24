@@ -1,18 +1,18 @@
 <!--index.wxml-->
 <view class="container">
   <view class="section" style="background:#787878;margin:20rpx;padding:20rpx">
-    <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+    <picker mode="date" value="{{date}}" bindchange="bindDateChangeTrain">
       <view class="picker">
         日期: {{date}}
       </view>
     </picker>
   </view>
   <view id="address_view">
-    <label bindtap="gotoStartTrainStation" data-code="{{startName}}">{{startName}}</label>
-    <label bindtap="gotoEndTrainStation" data-code="{{endName}}">{{endName}}</label>
+    <label bindtap="startTrainStation" data-code="{{startName}}">{{startName}}</label>
+    <label bindtap="endTrainStation" data-code="{{endName}}">{{endName}}</label>
   </view>
 
-  <view id="btn_view" bindtap="bindBtnTap">
+  <view id="btn_view" bindtap="bindBtnTapTrain">
     <button>查 询</button>
   </view>
   <view>
@@ -24,18 +24,18 @@
 
 <view class="container">
   <view class="section" style="background:#787878;margin:20rpx;padding:20rpx">
-    <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+    <picker mode="date" value="{{date}}" bindchange="bindDateChangeAir">
       <view class="picker">
         日期: {{date}}
       </view>
     </picker>
   </view>
   <view id="address_view">
-    <label bindtap="gotoStartAirport" data-code="{{startName}}">{{startName}}</label>
-    <label bindtap="gotoEndAirport" data-code="{{endName}}">{{endName}}</label>
+    <label bindtap="startAirport" data-code="{{startName}}">{{startName}}</label>
+    <label bindtap="endAirport" data-code="{{endName}}">{{endName}}</label>
   </view>
 
-  <view id="btn_view" bindtap="bindBtnTap">
+  <view id="btn_view" bindtap="bindBtnTapAir">
     <button>查 询</button>
   </view>
   <view>

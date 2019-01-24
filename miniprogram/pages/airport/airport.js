@@ -34,11 +34,13 @@ Page({
   bindtap(e) {
     if (this.data.station=="start"){
       wx.setStorageSync('startName', e.detail.name);
+      wx.setStorageSync('startCode', e.detail.code);
       this.setData({ station: "" });
       console.log(e.detail.name)
   }
     if (this.data.station == "end") {
       wx.setStorageSync('endName', e.detail.name);
+      wx.setStorageSync('endCode', e.detail.code);
       this.setData({ station: "" });
       console.log(e.detail.name)
     }
