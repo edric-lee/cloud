@@ -8,17 +8,93 @@ Page({
     list: [], //查询结果列表
     modalHidden: true, //显示隐藏提示框
     confirmText: '', //提示框提示内容
-    startName: '南宁东',
-    endName: '目的站',
+    startName: '始发',
+    endName: '到达',
+    city:"北京",
     startCode: '',
     endCode: '',
     selectDate: '', //选择的日期
-
+    max: "",
     // dateList: [], //60天的日期列表
     // dateIndex: 0, //列表索引
+    radioAir: true,
+    radioTrain: false,
+    radioOldtrain: false,
+    price:[],
+    op: 10,
+    opcity:10,
+    hotelPrice:"",
+    radios: [{
+        label: '飞机',
+        value: 'air',
+      },
+      {
+        label: '动车',
+        value: 'train',
+      },
+      {
+        label: '火车',
+        value: 'oldtrain',
+      }
+    ],
+
+    cityRadios: [{
+      label: '一管',
+    },
+    {
+      label: '教师/员工',
+    }
+    ]
 
   },
-  startTrainStation  : function() {
+
+  cityCheck(e) {
+    console.log(e.currentTarget)
+    var that = this;
+    var opcity = e.currentTarget.dataset.index;
+    that.setData({
+      opcity: opcity,
+    })
+    },
+  check(e) {
+    var that = this;
+    var op = e.currentTarget.dataset.index
+    that.setData({
+      op: op
+    })
+
+    var option = e.currentTarget.dataset.value
+    
+    if (option == "air") {
+      this.setData({
+        radioAir: true,
+        radioTrain: false,
+        radioOldtrain: false,
+      })
+    }
+    if (option == "train") {
+      this.setData({
+        radioAir: false,
+        radioTrain: true,
+        radioOldtrain: false,
+      })
+    }
+    if (option == "oldtrain") {
+      this.setData({
+        radioAir: false,
+        radioTrain: false,
+        radioOldtrain: true,
+      })
+    }
+  },
+
+  hotel: function () {
+    wx.navigateTo({
+      url: '../city/city'
+    })
+  },
+
+  startTrainStation: function() {
     wx.setStorageSync('station', "start");
     wx.navigateTo({
       url: '../trainStation/trainStation'
@@ -30,24 +106,18 @@ Page({
       url: '../trainStation/trainStation'
     })
   },
-  startAirport: function () {
+  startAirport: function() {
     wx.setStorageSync('station', "start");
     wx.navigateTo({
       url: '../airport/airport'
     })
   },
-  endAirport: function () {
+  endAirport: function() {
     wx.setStorageSync('station', "end");
     wx.navigateTo({
       url: '../airport/airport'
     })
   },
-  // bindPickerChangeTrain: function(e) {
-  //   var str = this.data.dateList[e.detail.value];
-  //   this.setData({
-  //     selectDate: str
-  //   });
-  // },
   
   // // 查询按钮
   // bindBtnTapAir: function() {
@@ -93,34 +163,53 @@ Page({
         startCode: code1
       });
     }
-    
+
     //目的站点
     var name2 = wx.getStorageSync('endName');
     var code2 = wx.getStorageSync('endCode');
-    console.log("endName:", name2,code2);
+    console.log("endName:", name2, code2);
     if (name2) {
       this.setData({
         endName: name2,
         endCode: code2
       });
     }
-  },
-  //  点击日期组件确定事件
-  bindDateChangeTrain: function(e) {
-    var dt=e.detail.value;
-    var dt = dt.replace(/-/g, "/");
+    var priceA = wx.getStorageSync('priceA');
+    var priceB = wx.getStorageSync('priceB');
+    var city = wx.getStorageSync('cityName');
+    // this.setData({ price: [],})
+    var price = new Array()
+    price.push(priceA, priceB);
     this.setData({
-      date: dt
-    })
+      price: price,
+      city: city
+     })
     
   },
-  bindDateChangeAir: function (e) {
+  
+  //  点击日期组件确定事件
+  bindDateChangeTrain: function(e) {
     var dt = e.detail.value;
     var dt = dt.replace(/-/g, "/");
     this.setData({
       date: dt
     })
 
+  },
+  bindDateChangeAir: function(e) {
+    var dt = e.detail.value;
+    var dt = dt.replace(/-/g, "/");
+    this.setData({
+      date: dt
+    })
+
+  },
+  bindBtnTapCity: function(e){
+    var opcity = this.data.opcity
+    var price = this.data.price
+    this.setData({
+      hotelPrice: price[opcity]
+    })
   },
   bindBtnTapTrain: function(e) {
     if (this.data.startName.length < 1) {
@@ -158,7 +247,9 @@ Page({
       console.log(arr)
       var max = Math.max.apply(Math, arr);
       console.log(max)
-
+      this.setData({
+        max: max
+      });
       var sum = 0;
       for (var i = 0; i < arr.length; i++) {
         sum += arr[i];
@@ -167,7 +258,7 @@ Page({
       console.log(mean);
     })
   },
-  bindBtnTapOldTrain: function (e) {
+  bindBtnTapOldTrain: function(e) {
     if (this.data.startName.length < 1) {
       this.openModal('请输入出发站');
       return;
@@ -203,7 +294,9 @@ Page({
       console.log(arr)
       var max = Math.max.apply(Math, arr);
       console.log(max)
-
+      this.setData({
+        max: max
+      });
       var sum = 0;
       for (var i = 0; i < arr.length; i++) {
         sum += arr[i];
@@ -212,7 +305,7 @@ Page({
       console.log(mean);
     })
   },
-  bindBtnTapAir: function (e) {
+  bindBtnTapAir: function(e) {
     if (this.data.startName.length < 1) {
       this.openModal('请输入出发站');
       return;
@@ -251,7 +344,9 @@ Page({
       console.log(arr)
       var max = Math.max.apply(Math, arr);
       console.log(max)
-
+      this.setData({
+        max: max
+      });
       var sum = 0;
       for (var i = 0; i < arr.length; i++) {
         sum += arr[i];
@@ -259,7 +354,7 @@ Page({
       var mean = sum / arr.length;
       console.log(mean);
 
-      
+
     })
   },
 })
