@@ -3,6 +3,23 @@
 var app = getApp()
 Page({
   data: {
+    transport: [{
+      name: '飞机',
+      checked: false
+    }, {
+      name: '动车',
+      checked: false
+    }, {
+      name: '火车',
+      checked: false
+    }],
+    lever: [{
+      name: '一管',
+      checked: false
+    }, {
+      name: '教师/员工',
+      checked: false
+    }],
     date: "2019/1/1",
     url: "",
     list: [], //查询结果列表
@@ -10,7 +27,7 @@ Page({
     confirmText: '', //提示框提示内容
     startName: '始发',
     endName: '到达',
-    city:"北京",
+    city:"",
     startCode: '',
     endCode: '',
     selectDate: '', //选择的日期
@@ -24,62 +41,56 @@ Page({
     op: 10,
     opcity:10,
     hotelPrice:"",
-    radios: [{
-        label: '飞机',
-        value: 'air',
-      },
-      {
-        label: '动车',
-        value: 'train',
-      },
-      {
-        label: '火车',
-        value: 'oldtrain',
-      }
-    ],
-
-    cityRadios: [{
-      label: '一管',
     },
-    {
-      label: '教师/员工',
-    }
-    ]
-
+  radioTransport: function (e) {
+    var index = e.currentTarget.dataset.index;//获取当前点击的下标
+    var transport = this.data.transport;//选项集合
+    if (transport[index].checked) return;//如果点击的当前已选中则返回
+    transport.forEach(item => {
+      item.checked = false
+    })
+    transport[index].checked = true;//改变当前选中的checked值
+    this.setData({
+      transport: transport
+    });
   },
-
-  cityCheck(e) {
-    console.log(e.currentTarget)
-    var that = this;
-    var opcity = e.currentTarget.dataset.index;
-    that.setData({
-      opcity: opcity,
+  radioLever: function (e) {
+    var index = e.currentTarget.dataset.index;//获取当前点击的下标
+    console.log(index)
+    this.setData({
+      opcity: index,
     })
-    },
-  check(e) {
-    var that = this;
-    var op = e.currentTarget.dataset.index
-    that.setData({
-      op: op
+    var lever = this.data.lever;//选项集合
+    if (lever[index].checked) return;//如果点击的当前已选中则返回
+    lever.forEach(item => {
+      item.checked = false
     })
-
-    var option = e.currentTarget.dataset.value
-    
-    if (option == "air") {
+    lever[index].checked = true;//改变当前选中的checked值
+    this.setData({
+      lever: lever
+    });
+  },
+  radioChangeTransport: function (e) {
+    var checkValue = e.detail.value;
+    console.log(checkValue)
+    this.setData({
+      checkValue: checkValue
+    });
+    if (checkValue == "飞机") {
       this.setData({
         radioAir: true,
         radioTrain: false,
         radioOldtrain: false,
       })
     }
-    if (option == "train") {
+    if (checkValue == "动车") {
       this.setData({
         radioAir: false,
         radioTrain: true,
         radioOldtrain: false,
       })
     }
-    if (option == "oldtrain") {
+    if (checkValue == "火车") {
       this.setData({
         radioAir: false,
         radioTrain: false,
@@ -87,7 +98,7 @@ Page({
       })
     }
   },
-
+  
   hotel: function () {
     wx.navigateTo({
       url: '../city/city'
@@ -204,7 +215,15 @@ Page({
     })
 
   },
-  bindBtnTapCity: function(e){
+  bindBtnTapCity: function (e) {
+    if (this.data.city=="") {
+      this.openModal('请选择城市');
+      return;
+    }
+    if (this.data.opcity == 10) {
+      this.openModal('请选择级别');
+      return;
+    }
     var opcity = this.data.opcity
     var price = this.data.price
     this.setData({
@@ -353,8 +372,6 @@ Page({
       }
       var mean = sum / arr.length;
       console.log(mean);
-
-
     })
   },
 })

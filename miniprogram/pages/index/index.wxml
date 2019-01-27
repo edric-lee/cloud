@@ -1,9 +1,20 @@
 <!--index.wxml-->
-<view class='radiochange'>
+<!-- <view class='radiochange'>
   <view class="radio-box" wx:for="{{radios}}" wx:key="item.id">
     <lebel class="radio {{ index==op ? 'on' : ''}}" data-index='{{index}}' data-value='{{item.value}}' bindtap="check" >
     <image wx:if='{{index==op}}' class=".icon-check:before" ></image>
     </lebel>{{item.label}}
+  </view>
+</view> -->
+
+<view class='wrap'>
+  <view class='checkbox-con'>
+    <radio-group bindchange="radioChangeTransport">
+      <label class="{{item.checked?'checkbox checked':'checkbox'}}" wx:for="{{transport}}" bindtap='radioTransport' data-index="{{index}}" wx:key="item.name">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.name}}
+      </label>
+    </radio-group>
+
   </view>
 </view>
 
@@ -112,11 +123,21 @@
 
 
 
-<view class='radiochange'>
+<!-- <view class='radiochange'>
   <view class="radio-box" wx:for="{{cityRadios}}" wx:key="item.id">
     <lebel class="radio {{ index==opcity ? 'on' : ''}}" data-index='{{index}}' data-value='{{item.value}}' bindtap="cityCheck" >
     <image wx:if='{{index==opcity}}' class=".icon-check:before" ></image>
     </lebel>{{item.label}}
+  </view>
+</view> -->
+<view class='wrap'>
+  <view class='checkbox-con'>
+    <radio-group >
+      <label class="{{item.checked?'checkbox checked':'checkbox'}}" wx:for="{{lever}}" bindtap='radioLever' data-index="{{index}}" wx:key="item.name">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.name}}
+      </label>
+    </radio-group>
+
   </view>
 </view>
 <view class="main">

@@ -80,37 +80,45 @@ font-size: 12px;
   align-items: center;
 }
 
-.radio-box{
-  display: inline-block;
-  position: relative;
-  height: 20px;
-  line-height: 20px;
-  margin-right: 5px;
-  font-size: 26rpx;
-}
-.input-radio {
-  display: inline-block;
-  position: absolute;
-  opacity: 0;
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  left: 0px;
-  outline: none;
-  -webkit-appearance: none;
-}
-.radio {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  vertical-align: middle;
-  cursor: pointer;
-  background: #D7D7D9;
+
+
+/* wxss */
+.wrap{
+  width: 95%;
+  margin:20rpx auto;
   
 }
-.on{
-    background:red;
-    font-size:20px;
-    color:  white;
+ 
+.checkbox-con{
+
+  text-align: center;
+
+}
+.checkbox{
+  
+  width:90px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 28rpx;
+  color: #888888;
+  border: 1rpx solid #CECECE;
+  border-radius: 5rpx;
+  display: inline-block;
+
+
+}
+.checked{
+  color: red;
+  background: rgba(253, 73, 49, 0.08);
+  border: 1rpx solid red;
+}
+.checkbox checkbox{
+  display: none
+}
+.checked-img{
+  width: 28rpx;
+  height: 28rpx;
+  position: absolute;
+  top: 0;
+  right: 0
 }
