@@ -1,2 +1,35 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<view class='i-grid'>
+<i-grid>
+  <i-grid-item class="i-grid-item">
+    <i-grid-icon>
+      <icon class="icon-icon_kuanxiangguanli"></icon>
+    </i-grid-icon>
+    <i-grid-label>差旅标准</i-grid-label>
+  </i-grid-item>
+  <i-grid-item>
+    <i-grid-icon>
+      <icon class="icon-kaifa"></icon>
+    </i-grid-icon>学员转账</i-grid-item>
+  <i-grid-item>
+    <i-grid-icon>
+      <icon class="icon-chucha"></icon>
+    </i-grid-icon>开发中</i-grid-item>
+</i-grid>
+<i-grid>
+  <i-grid-item>
+    <i-grid-icon>
+      <icon class="icon-icon_kuanxiangguanli"></icon>
+    </i-grid-icon>
+    <i-grid-label>差旅标准</i-grid-label>
+  </i-grid-item>
+  <i-grid-item>
+    <i-grid-icon>
+      <icon class="icon-kaifa"></icon>
+    </i-grid-icon>学员转账</i-grid-item>
+  <i-grid-item>
+    <i-grid-icon>
+      <icon class="icon-chucha"></icon>
+    </i-grid-icon>开发中</i-grid-item>
+</i-grid>
+</view>
