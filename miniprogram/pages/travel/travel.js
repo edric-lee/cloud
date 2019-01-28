@@ -1,4 +1,4 @@
-//index.js
+//travel.js
 //获取应用实例
 var app = getApp()
 Page({
@@ -34,9 +34,9 @@ Page({
     max: "",
     // dateList: [], //60天的日期列表
     // dateIndex: 0, //列表索引
-    radioAir: true,
-    radioTrain: false,
-    radioOldtrain: false,
+    radioAir: "",
+    radioTrain: "",
+    radioOldtrain: "",
     price:[],
     op: 10,
     opcity:10,
@@ -77,6 +77,9 @@ Page({
       checkValue: checkValue
     });
     if (checkValue == "飞机") {
+      wx.setStorageSync('radioAir', true);
+      wx.setStorageSync('radioTrain', false);
+      wx.setStorageSync('radioOldtrain', false);
       this.setData({
         radioAir: true,
         radioTrain: false,
@@ -84,6 +87,9 @@ Page({
       })
     }
     if (checkValue == "动车") {
+      wx.setStorageSync('radioAir', false);
+      wx.setStorageSync('radioTrain', true);
+      wx.setStorageSync('radioOldtrain', false);
       this.setData({
         radioAir: false,
         radioTrain: true,
@@ -91,6 +97,9 @@ Page({
       })
     }
     if (checkValue == "火车") {
+      wx.setStorageSync('radioAir', false);
+      wx.setStorageSync('radioTrain', false);
+      wx.setStorageSync('radioOldtrain', true);
       this.setData({
         radioAir: false,
         radioTrain: false,
@@ -167,11 +176,19 @@ Page({
     //出发站点
     var name1 = wx.getStorageSync('startName');
     var code1 = wx.getStorageSync('startCode');
+    var radioAir = wx.getStorageSync('radioAir');
+    console.log("radioAir:", radioAir);
+    var radioTrain = wx.getStorageSync('radioTrain');
+    var radioOldtrain = wx.getStorageSync('radioOldtrain');
     console.log("startName:", name1, code1);
     if (name1) {
       this.setData({
         startName: name1,
-        startCode: code1
+        startCode: code1,
+        radioAir: radioAir,
+        radioTrain:radioTrain,
+        radioOldtrain:radioOldtrain,
+
       });
     }
 
@@ -231,26 +248,30 @@ Page({
     })
   },
   bindBtnTapTrain: function(e) {
-    if (this.data.startName.length < 1) {
+    if (this.data.startName == '始发') {
       this.openModal('请输入出发站');
       return;
     }
-    if (this.data.endName.length < 1) {
+    if (this.data.endName=='到达') {
       this.openModal('请输入目的站');
       return;
     }
-    if (this.data.date.length < 1) {
-      this.openModal('请选择日期');
-      return;
-    }
+    // if (this.data.date.length < 1) {
+    //   this.openModal('请选择日期');
+    //   return;
+    // }
+    wx.showToast({
+      title: '加载中...',
+      mask: true,
+      icon: 'loading'
+    })
     var that = this;
     wx.cloud.callFunction({ //调用云函数
       name: 'http',
       data: {
         url: encodeURI("http://apis.haoservice.com/lifeservice/train/ypcx?key=e2cb23d7b39348fbb3121d4ec6bba895&date=" + that.data.date + "&from=" + wx.getStorageSync('startName') + "&to=" + wx.getStorageSync('endName') + "&paybyvas=false"),
       }, //云函数名为http
-    }).then(res => {　　　　　　 //Promise
-      // console.log(JSON.parse(res.result).result);
+    }).then(res => {
       var list = JSON.parse(res.result).result;
       var arr = new Array();
       var price = 0;
@@ -275,21 +296,25 @@ Page({
       }
       var mean = sum / arr.length;
       console.log(mean);
-    })
+      }).catch(err => {
+        this.setData({
+          max: "无价格"
+        });
+      })
   },
   bindBtnTapOldTrain: function(e) {
-    if (this.data.startName.length < 1) {
+    if (this.data.startName == '始发') {
       this.openModal('请输入出发站');
       return;
     }
-    if (this.data.endName.length < 1) {
+    if (this.data.endName == '到达') {
       this.openModal('请输入目的站');
       return;
     }
-    if (this.data.date.length < 1) {
-      this.openModal('请选择日期');
-      return;
-    }
+    // if (this.data.date.length < 1) {
+    //   this.openModal('请选择日期');
+    //   return;
+    // }
     var that = this;
     wx.cloud.callFunction({ //调用云函数
       name: 'http',
@@ -322,21 +347,30 @@ Page({
       }
       var mean = sum / arr.length;
       console.log(mean);
-    })
+      }).catch(err => {
+        this.setData({
+          max: "无价格"
+        });
+      })
   },
   bindBtnTapAir: function(e) {
-    if (this.data.startName.length < 1) {
+    if (this.data.startName =="'始发'") {
       this.openModal('请输入出发站');
       return;
     }
-    if (this.data.endName.length < 1) {
+    if (this.data.endName=="到达") {
       this.openModal('请输入目的站');
       return;
     }
-    if (this.data.date.length < 1) {
-      this.openModal('请选择日期');
-      return;
-    }
+    // if (this.data.date.length < 1) {
+    //   this.openModal('请选择日期');
+    //   return;
+    // }
+    wx.showToast({
+      title: '加载中...',
+      mask: true,
+      icon: 'loading'
+    })
     var that = this;
     wx.cloud.callFunction({ //调用云函数
       name: 'http',
@@ -372,6 +406,10 @@ Page({
       }
       var mean = sum / arr.length;
       console.log(mean);
-    })
+      }).catch(err => {
+        this.setData({
+          max: "无价格"
+        });
+      })
   },
 })

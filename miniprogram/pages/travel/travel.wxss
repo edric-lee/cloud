@@ -1,6 +1,5 @@
 view {
-
-  font-size: 18px;
+  font-size: 17px;
   
 }
 .radiochange{
@@ -31,7 +30,7 @@ font-size: 12px;
   
 }
 .price{
-  color: red;
+  color: #2193b0;
   
 }
 .title{
@@ -69,7 +68,8 @@ font-size: 12px;
 .btn_view{
   width: 70%;
   margin-bottom: 20px;
-  background-color: red;
+  background-color:#2193b0;
+
   border-radius: 5px;
   height: 40px;
   color: white;
@@ -86,16 +86,14 @@ font-size: 12px;
 .wrap{
   width: 95%;
   margin:20rpx auto;
-  
+
+
 }
  
 .checkbox-con{
-
   text-align: center;
-
 }
 .checkbox{
-  
   width:90px;
   height: 40px;
   line-height: 40px;
@@ -108,9 +106,9 @@ font-size: 12px;
 
 }
 .checked{
-  color: red;
-  background: rgba(253, 73, 49, 0.08);
-  border: 1rpx solid red;
+  color: #2193b0;
+  background: rgba(30, 124, 161, 0.08);
+  border: 1rpx solid #2193b0;
 }
 .checkbox checkbox{
   display: none
@@ -118,7 +116,7 @@ font-size: 12px;
 .checked-img{
   width: 28rpx;
   height: 28rpx;
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   right: 0
 }

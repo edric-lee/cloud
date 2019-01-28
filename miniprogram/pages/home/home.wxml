@@ -1,35 +1,42 @@
-<!--pages/home/home.wxml-->
+<view>
+
+  <open-data class="avatar" type='userAvatarUrl'></open-data>
+
+</view>
+<view class="name">
+  <open-data type="userNickName" lang="zh_CN"></open-data>
+</view>
 <view class='i-grid'>
-<i-grid>
-  <i-grid-item class="i-grid-item">
-    <i-grid-icon>
-      <icon class="icon-icon_kuanxiangguanli"></icon>
-    </i-grid-icon>
-    <i-grid-label>差旅标准</i-grid-label>
-  </i-grid-item>
-  <i-grid-item>
-    <i-grid-icon>
-      <icon class="icon-kaifa"></icon>
-    </i-grid-icon>学员转账</i-grid-item>
-  <i-grid-item>
-    <i-grid-icon>
-      <icon class="icon-chucha"></icon>
-    </i-grid-icon>开发中</i-grid-item>
-</i-grid>
-<i-grid>
-  <i-grid-item>
-    <i-grid-icon>
-      <icon class="icon-icon_kuanxiangguanli"></icon>
-    </i-grid-icon>
-    <i-grid-label>差旅标准</i-grid-label>
-  </i-grid-item>
-  <i-grid-item>
-    <i-grid-icon>
-      <icon class="icon-kaifa"></icon>
-    </i-grid-icon>学员转账</i-grid-item>
-  <i-grid-item>
-    <i-grid-icon>
-      <icon class="icon-chucha"></icon>
-    </i-grid-icon>开发中</i-grid-item>
-</i-grid>
+  <i-grid>
+    <i-grid-item class="i-grid-item" bindtap="travel">
+      <i-grid-icon>
+        <image src="../images/a2.png" />
+      </i-grid-icon>
+      <i-grid-label>差旅标准</i-grid-label>
+    </i-grid-item>
+    <i-grid-item>
+      <i-grid-icon>
+        <image src="../images/a3.png" />
+      </i-grid-icon>学员转账(开发中)</i-grid-item>
+    <i-grid-item>
+      <i-grid-icon>
+        <image src="../images/a1.png" />
+      </i-grid-icon>开发中</i-grid-item>
+  </i-grid>
+  <i-grid>
+    <i-grid-item>
+      <i-grid-icon>
+        <image src="../images/a1.png" />
+      </i-grid-icon>
+      <i-grid-label>开发中</i-grid-label>
+    </i-grid-item>
+    <i-grid-item>
+      <i-grid-icon>
+        <image src="../images/a1.png" />
+      </i-grid-icon>开发中</i-grid-item>
+    <i-grid-item>
+      <i-grid-icon>
+        <image src="../images/a1.png" />
+      </i-grid-icon>开发中</i-grid-item>
+  </i-grid>
 </view>

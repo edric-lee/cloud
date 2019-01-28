@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/http/http",
     "pages/home/home",
+    "pages/travel/travel",
+    "pages/http/http",
     "pages/trainStation/trainStation",
     "pages/airport/airport",
     "pages/city/city"
@@ -10,7 +10,7 @@
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#FF0000",
+    "navigationBarBackgroundColor": "#2193b0",
     "navigationBarTitleText": "财务信息平台",
     "navigationBarTextStyle": "white"
   }

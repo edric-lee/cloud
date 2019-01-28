@@ -7,7 +7,25 @@ Page({
   data: {
 
   },
-
+  getUserInfo: function () {
+    var that = this
+    _getUserInfo();
+    function _getUserInfo() {
+      wx.getUserInfo({
+        success: function (res) {
+          that.setData({
+            userInfo: res.userInfo
+          })
+          that.update()
+        }
+      })
+    }
+  },
+  travel: function () {
+    wx.navigateTo({
+      url: '../travel/travel'
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

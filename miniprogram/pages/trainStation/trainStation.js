@@ -34,16 +34,20 @@ Page({
   bindtap(e) {
     if (this.data.station=="start"){
       wx.setStorageSync('startName', e.detail.name);
+      wx.setStorageSync('radioTrain', wx.getStorageSync('radioTrain'));
+      wx.setStorageSync('radioOldtrain', wx.getStorageSync('radioOldtrain'));
       this.setData({ station: "" });
       console.log(e.detail.name)
   }
     if (this.data.station == "end") {
       wx.setStorageSync('endName', e.detail.name);
+      wx.setStorageSync('radioTrain', wx.getStorageSync('radioTrain'));
+      wx.setStorageSync('radioOldtrain', wx.getStorageSync('radioOldtrain'));
       this.setData({ station: "" });
       console.log(e.detail.name)
     }
     wx.navigateTo({
-      url: '../index/index'
+      url: '../travel/travel'
     })
   },
   //点击选中

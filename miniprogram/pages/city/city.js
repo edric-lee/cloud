@@ -37,7 +37,7 @@ Page({
     wx.setStorageSync('priceB', e.detail.priceB);
     console.log(e.detail.priceA,e.detail.priceB)
     wx.navigateTo({
-      url: '../index/index'
+      url: '../travel/travel'
     })
   },
   //点击选中

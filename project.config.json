@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 6,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
@@ -57,7 +57,7 @@
 				{
 					"id": 4,
 					"name": "index",
-					"pathName": "pages/index/index",
+					"pathName": "pages/travel/travel",
 					"query": ""
 				},
 				{
