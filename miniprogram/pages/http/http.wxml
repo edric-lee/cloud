@@ -1,1 +1,1 @@
-<button bindtap="http">http</button>
+<button bindtap="http">http</button><button bindtap="sql">sql</button>
