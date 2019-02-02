@@ -5,25 +5,28 @@ Page({
    * 页面的初始数据
    */
   data: {
-
-  },
-  getUserInfo: function () {
-    var that = this
-    _getUserInfo();
-    function _getUserInfo() {
-      wx.getUserInfo({
-        success: function (res) {
-          that.setData({
-            userInfo: res.userInfo
-          })
-          that.update()
-        }
-      })
-    }
+    openid:""
+  }, 
+  getUserInfo: function (result) {
+    wx.cloud.callFunction({
+      name: 'getOpenid',
+      complete: res => {
+         this.setData({
+           openid: res.result.openid
+         })
+        wx.setStorageSync("openid", res.result.openid);
+      }
+    })
   },
   travel: function () {
+
     wx.navigateTo({
       url: '../travel/travel'
+    })
+  },
+  account: function () {
+    wx.navigateTo({
+      url: '../account/account'
     })
   },
   /**
