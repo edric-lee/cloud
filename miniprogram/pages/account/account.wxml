@@ -1,3 +1,22 @@
+<view>
+<form bindsubmit="accountFormSubmit">
+  <view class="cu-form-group margin-top">
+    <view class='title'>信息</view>
+    <input placeholder="学员转账信息" class='radius' name='content'></input>
+  </view>
+  <view class="cu-form-group">
+    <view class='title'>账户</view>
+    <input placeholder="学员转账所用银行账户名" class='radius' name='accountName'></input>
+  </view>
+  <view class="cu-form-group">
+    <view class='title'>金额</view>
+    <input type="number" placeholder="入账金额" class='radius' name='money'></input>
+  </view>
+  <button form-type="submit"> 提交 </button>
+  </form>
+</view>
+
+
 <view class="table">
   <view class="tr bg-w">
     <view class="th">时间</view>
@@ -24,11 +43,7 @@
 
 <view class="section" wx:if='{{showOrHidden}}'>
   <form bindsubmit="bindFormSubmit">
-    <textarea class='textarea' placeholder="添加内容" name="textarea"/>
+    <textarea class='textarea' placeholder="添加内容" name="textarea" />
     <button form-type="submit"> 提交 </button>
   </form>
 </view>
-
-
-
-

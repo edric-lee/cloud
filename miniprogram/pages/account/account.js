@@ -1,6 +1,7 @@
 // pages/account/account.js
 const db = wx.cloud.database()
 const bank = db.collection('bank')
+const role = db.collection('role')
 Page({
 
   /**
@@ -20,6 +21,15 @@ Page({
         showOrHidden:true
       })
     }
+    role.get({
+      success: res => {
+        var employee = res.data[0].employee
+        this.setData({
+          employee: employee
+        })
+         console.log(this.data.employee)
+      }
+    })
   },
 
   /**
@@ -70,14 +80,17 @@ Page({
   onShareAppMessage: function () {
 
   },
+  //上传
   bindFormSubmit: function (e) {
     var msg = e.detail.value.textarea
+    console.log(msg.substring(msg.indexOf("对方户名:") + 5, msg.indexOf("。[建设银行]")))
+    if (this.data.employee.indexOf(msg.substring(msg.indexOf("对方户名:") + 5, msg.indexOf("。[建设银行]")))==-1){//员工不提交
     var countNum = bank.where({
       time: msg.substring(msg.indexOf("0003的账户") + 7, msg.indexOf("分") + 1),
       money: msg.substring(msg.indexOf("收入人民币") + 5, msg.indexOf("元，余额")),
       accountName: msg.substring(msg.indexOf("对方户名:") + 5, msg.indexOf("。[建设银行]"))
     }).count().then(res => {
-      if (res.total == 0) {
+      if (res.total == 0) {//重复不提交
         bank.add({
           data: {
             time: msg.substring(msg.indexOf("0003的账户") + 7, msg.indexOf("分") + 1), //时间
@@ -92,7 +105,14 @@ Page({
         })
       }
     })
+    }
   },
+  accountFormSubmit:function(e){
+    console.log(e.detail.value.content)
+    console.log(e.detail.value.accountName)
+    console.log(e.detail.value.money)
+  },
+  //查询
   query:function(){
     // theExam.where({
     //   grade: wx.getStorageSync('grade') // 填入当前用户 openid
