@@ -10,7 +10,7 @@
 	},
 	"appid": "wx4396fae2c57db290",
 	"projectname": "cloud",
-	"libVersion": "2.2.5",
+	"libVersion": "2.4.0",
 	"condition": {
 		"search": {
 			"current": -1,
@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 7,
 			"list": [
 				{
 					"id": 0,
@@ -62,15 +62,23 @@
 				},
 				{
 					"id": 5,
-					"name": "train",
-					"pathName": "pages/airport/airport",
-					"query": ""
+					"name": "auth",
+					"pathName": "pages/auth/auth",
+					"query": "",
+					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "home",
 					"pathName": "pages/home/home",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "reim",
+					"pathName": "pages/reim/reim",
+					"query": "",
+					"scene": null
 				}
 			]
 		}

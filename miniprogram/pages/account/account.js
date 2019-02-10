@@ -16,9 +16,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    if (wx.getStorageSync('openid') =="o7OsQ5ZguMk306fh4Pxv_qtccbDE"){
+    if (wx.getStorageSync('openid') == "o7OsQ5ZguMk306fh4Pxv_qtccbDE") {
       this.setData({
-        showOrHidden:true
+        showOrHidden: true
       })
     }
     role.get({
@@ -27,7 +27,7 @@ Page({
         this.setData({
           employee: employee
         })
-         console.log(this.data.employee)
+        console.log(this.data.employee)
       }
     })
   },
@@ -84,36 +84,63 @@ Page({
   bindFormSubmit: function (e) {
     var msg = e.detail.value.textarea
     console.log(msg.substring(msg.indexOf("对方户名:") + 5, msg.indexOf("。[建设银行]")))
-    if (this.data.employee.indexOf(msg.substring(msg.indexOf("对方户名:") + 5, msg.indexOf("。[建设银行]")))==-1){//员工不提交
-    var countNum = bank.where({
-      time: msg.substring(msg.indexOf("0003的账户") + 7, msg.indexOf("分") + 1),
-      money: msg.substring(msg.indexOf("收入人民币") + 5, msg.indexOf("元，余额")),
-      accountName: msg.substring(msg.indexOf("对方户名:") + 5, msg.indexOf("。[建设银行]"))
-    }).count().then(res => {
-      if (res.total == 0) {//重复不提交
-        bank.add({
-          data: {
-            time: msg.substring(msg.indexOf("0003的账户") + 7, msg.indexOf("分") + 1), //时间
-            content: msg.substring(msg.indexOf("分") + 1, msg.indexOf("收入人民币")), //内容
-            money: msg.substring(msg.indexOf("收入人民币") + 5, msg.indexOf("元，余额")), //金额
-            accountName: msg.substring(msg.indexOf("对方户名:") + 5, msg.indexOf("。[建设银行]")) //对方户名
-          }
-        }).then(res => {
-          console.log(res)
-        }).catch(err => {
-          console.error(err)
-        })
-      }
-    })
+    if (this.data.employee.indexOf(msg.substring(msg.indexOf("对方户名:") + 5, msg.indexOf("。[建设银行]"))) == -1) { //员工不提交
+      var countNum = bank.where({
+        time: msg.substring(msg.indexOf("0003的账户") + 7, msg.indexOf("分") + 1),
+        money: msg.substring(msg.indexOf("收入人民币") + 5, msg.indexOf("元，余额")),
+        accountName: msg.substring(msg.indexOf("对方户名:") + 5, msg.indexOf("。[建设银行]"))
+      }).count().then(res => {
+        if (res.total == 0) { //重复不提交
+          bank.add({
+            data: {
+              time: msg.substring(msg.indexOf("0003的账户") + 7, msg.indexOf("分") + 1), //时间
+              content: msg.substring(msg.indexOf("分") + 1, msg.indexOf("收入人民币")), //内容
+              money: msg.substring(msg.indexOf("收入人民币") + 5, msg.indexOf("元，余额")), //金额
+              accountName: msg.substring(msg.indexOf("对方户名:") + 5, msg.indexOf("。[建设银行]")) //对方户名
+            }
+          }).then(res => {
+            console.log(res)
+          }).catch(err => {
+            console.error(err)
+          })
+        }
+      })
     }
   },
-  accountFormSubmit:function(e){
-    console.log(e.detail.value.content)
-    console.log(e.detail.value.accountName)
-    console.log(e.detail.value.money)
+  accountFormSubmit: function (e) {
+
+    var content = e.detail.value.content;
+    var accountName = e.detail.value.accountName;
+    console.log(accountName)
+    var money = e.detail.value.money;
+    console.log(content.length + accountName.length + money.length)
+    // if ((content.length + accountName.length + money.length) > 0) {
+      bank.where({
+        accountName:db.RegExp({
+          regexp: e.detail.value.accountName
+        }),
+        content: db.RegExp({
+          regexp: e.detail.value.content
+        })
+        // content: e.detail.value.content,
+        // money: e.detail.value.money,
+      }).get({
+        success: res => {
+          this.setData({
+            listData: res.data,
+          })
+          console.log(res.data)
+        }
+      })
+    // // }
+    // else {
+    //   this.setData({
+    //     listData:["无"],
+    //   })
+    // }
   },
   //查询
-  query:function(){
+  query: function () {
     // theExam.where({
     //   grade: wx.getStorageSync('grade') // 填入当前用户 openid
     // }).field({
@@ -127,5 +154,5 @@ Page({
       }
     })
   },
-  
-    })
+
+})
