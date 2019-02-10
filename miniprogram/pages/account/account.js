@@ -2,6 +2,7 @@
 const db = wx.cloud.database()
 const bank = db.collection('bank')
 const role = db.collection('role')
+const _ = db.command
 Page({
 
   /**
@@ -15,7 +16,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     if (wx.getStorageSync('openid') == "o7OsQ5ZguMk306fh4Pxv_qtccbDE") {
       this.setData({
         showOrHidden: true
@@ -35,53 +36,53 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   },
   //上传
-  bindFormSubmit: function (e) {
+  bindFormSubmit: function(e) {
     var msg = e.detail.value.textarea
     console.log(msg.substring(msg.indexOf("对方户名:") + 5, msg.indexOf("。[建设银行]")))
     if (this.data.employee.indexOf(msg.substring(msg.indexOf("对方户名:") + 5, msg.indexOf("。[建设银行]"))) == -1) { //员工不提交
@@ -107,23 +108,33 @@ Page({
       })
     }
   },
-  accountFormSubmit: function (e) {
+  accountFormSubmit: function(e) {
 
     var content = e.detail.value.content;
     var accountName = e.detail.value.accountName;
     console.log(accountName)
     var money = e.detail.value.money;
     console.log(content.length + accountName.length + money.length)
-    // if ((content.length + accountName.length + money.length) > 0) {
+    if ((accountName.length + money.length) > 0) {
+      bank.where(_.or([{
+          accountName: accountName
+        },
+        {
+          money: e.detail.value.money
+        },
+      ])).get({
+        success: res => {
+          this.setData({
+            listData: res.data,
+          })
+          console.log(res.data)
+        }
+      })
+    } else if (content.length > 0) {
       bank.where({
-        accountName:db.RegExp({
-          regexp: e.detail.value.accountName
-        }),
         content: db.RegExp({
           regexp: e.detail.value.content
         })
-        // content: e.detail.value.content,
-        // money: e.detail.value.money,
       }).get({
         success: res => {
           this.setData({
@@ -132,15 +143,18 @@ Page({
           console.log(res.data)
         }
       })
-    // // }
-    // else {
-    //   this.setData({
-    //     listData:["无"],
-    //   })
-    // }
+    }
+    else {
+      wx.showModal({
+        title: '提示',
+        content: '请输入内容',
+        showCancel:false,
+       
+      })
+    }
   },
   //查询
-  query: function () {
+  query: function() {
     // theExam.where({
     //   grade: wx.getStorageSync('grade') // 填入当前用户 openid
     // }).field({
