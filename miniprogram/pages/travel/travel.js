@@ -1,5 +1,7 @@
 //travel.js
 //获取应用实例
+const db = wx.cloud.database()
+const role = db.collection('role')
 var app = getApp()
 Page({
   data: {
@@ -177,20 +179,23 @@ Page({
     role.get({
       success: res => {
         var financial = res.data[0].financial
+        if (financial.indexOf(wx.getStorageSync('openid')) == -1){
+          console.log("财务权限")
+          this.setData({
+            showOrHidden: false,
+            radioAir: false,
+            radioTrain: false,
+            radioOldtrain: false,
+          })
+        }
         this.setData({
           financial: financial
         })
+        
         console.log(this.data.financial)
       }
     })
-    // if (wx.getStorageSync('openid') != "o7OsQ5ZguMk306fh4Pxv_qtccbDE") {
-    //   this.setData({
-    //     showOrHidden: false,
-    //     radioAir: false,
-    //     radioTrain: false,
-    //     radioOldtrain: false,
-    //   })
-    // }
+
     //出发站点
     var name1 = wx.getStorageSync('startName');
     var code1 = wx.getStorageSync('startCode');

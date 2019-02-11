@@ -1,6 +1,6 @@
 // pages/home/home.js
 const db = wx.cloud.database()
-const role = db.collection('role')
+const userInfo = db.collection('userInfo')
 Page({
 
   /**
@@ -59,7 +59,7 @@ Page({
                 openid: res.result.openid
               })
               wx.setStorageSync("openid", res.result.openid);
-              console.log(res.result.openid)
+             
             }
           })
         } else {
@@ -82,6 +82,17 @@ Page({
           })
           wx.setStorageSync("openid", res.result.openid);
           console.log(res.result.openid)
+          console.log(res.result)
+          userInfo.where({
+            _openid: res.result.openId
+          }).count().then(res => {
+            if (res.total == 0) {
+              // console.log(res.detail)
+              userInfo.add({
+                data: e.detail.userInfo
+              })
+            }
+          })
         }
       })
       //用户按了允许授权按钮

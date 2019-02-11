@@ -81,10 +81,11 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 8,
 					"name": "train",
-					"pathName": "pages/home/home",
-					"query": ""
+					"pathName": "pages/travel/travel",
+					"query": "",
+					"scene": null
 				}
 			]
 		}
