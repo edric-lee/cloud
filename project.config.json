@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 7,
+			"current": 8,
 			"list": [
 				{
 					"id": 0,
@@ -49,9 +49,9 @@
 					"query": ""
 				},
 				{
-					"id": -1,
+					"id": 3,
 					"name": "train",
-					"pathName": "pages/train/train",
+					"pathName": "pages/travel/travel",
 					"query": ""
 				},
 				{
@@ -79,6 +79,12 @@
 					"pathName": "pages/reim/reim",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "train",
+					"pathName": "pages/home/home",
+					"query": ""
 				}
 			]
 		}

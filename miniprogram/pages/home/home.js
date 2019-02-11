@@ -1,4 +1,6 @@
 // pages/home/home.js
+const db = wx.cloud.database()
+const role = db.collection('role')
 Page({
 
   /**
@@ -19,6 +21,11 @@ Page({
   account: function () {
     wx.navigateTo({
       url: '../account/account'
+    })
+  },
+  reim: function () {
+    wx.navigateTo({
+      url: '../reim/reim'
     })
   },
   /**
@@ -51,7 +58,6 @@ Page({
               that.setData({
                 openid: res.result.openid
               })
-
               wx.setStorageSync("openid", res.result.openid);
               console.log(res.result.openid)
             }

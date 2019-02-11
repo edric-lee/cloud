@@ -39,7 +39,7 @@
     </view>
   </block>
 </view>
-<button bindtap="query">查询</button>
+<button wx:if='{{showOrHidden}}' bindtap="query">查询</button>
 
 <view class="section" wx:if='{{showOrHidden}}'>
   <form bindsubmit="bindFormSubmit">

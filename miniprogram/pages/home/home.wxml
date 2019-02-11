@@ -42,17 +42,19 @@
         </i-grid-item>
 
 
-        <i-grid-item>
+        <i-grid-item bindtap="reim">
           <i-grid-icon>
-            <image src="../images/a1.png" />
-          </i-grid-icon>报销</i-grid-item>
+            <image src="../images/a4.png" />
+          </i-grid-icon>
+          <i-grid-label>报销</i-grid-label>
+        </i-grid-item>
       </i-grid>
       <i-grid>
         <i-grid-item>
           <i-grid-icon>
-            <image src="../images/a1.png" />
+            <image src="../images/a5.png" />
           </i-grid-icon>
-          <i-grid-label>开发中</i-grid-label>
+          <i-grid-label>开票信息开发中</i-grid-label>
         </i-grid-item>
         <i-grid-item>
           <i-grid-icon>

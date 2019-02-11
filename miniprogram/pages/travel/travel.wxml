@@ -1,4 +1,4 @@
-<view class='wrap'>
+<view class='wrap' wx:if='{{showOrHidden}}'>
   <view class='checkbox-con'>
     <radio-group bindchange="radioChangeTransport">
       <label class="{{item.checked?'checkbox checked':'checkbox'}}" wx:for="{{transport}}" bindtap='radioTransport' data-index="{{index}}" wx:key="item.name">
@@ -68,7 +68,7 @@
       <label style="text-align:right" bindtap="endAirport" data-code="{{endName}}">{{endName}}</label>
     </view>
 
-    <view class="btn_view" bindtap="bindBtnTapAir">
+    <view class="btn_view" bindtap="bindBtnTapAir" wx:if='{{showOrHidden}}'>
       查 询
     </view>
     <view>
@@ -115,7 +115,7 @@
 
 
 
-<view class='wrap'>
+<view class='wrap'wx:if='{{showOrHidden}}'>
   <view class='checkbox-con'>
     <radio-group>
       <label class="{{item.checked?'checkbox checked':'checkbox'}}" wx:for="{{lever}}" bindtap='radioLever' data-index="{{index}}" wx:key="item.name">
@@ -125,7 +125,7 @@
 
   </view>
 </view>
-<view class="main">
+<view class="main"wx:if='{{showOrHidden}}'>
   <view class="container">
     <view class="subject">住宿</view>
 
