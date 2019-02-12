@@ -1,0 +1,44 @@
+<view class="cro" style="height:{{winH*0.9}}px">
+  <view class="cro_left_top"></view>
+  <view class="cro_right_top"></view>
+  <view class="cro_left_bottom"> </view>
+  <view class="cro_right_bottom"></view>
+  <view class="head">
+    <view class="logo"></view>
+    <view class="name">新东方</view>
+  </view>
+  <view class="body" style="height:{{winH*0.7-150}}px">
+    <view class="content">
+      <view class="text_left">公司名称：</view>
+      <view class="text_right">南宁市新东方教育培训学校</view>
+    </view>
+    <view class="content">
+      <view class="text_left">纳税人识别号：</view>
+      <view class="text_right">524501036801214460</view>
+    </view>
+    <view class="content">
+      <view class="text_left">开户行：</view>
+      <view class="text_right">中国农业银行南宁园湖支行</view>
+    </view>
+    <view class="content">
+      <view class="text_left">银行账户：</view>
+      <view class="text_right">20007001040002520</view>
+    </view>
+    <view class="content">
+      <view class="text_left">单位电话：</view>
+      <view class="text_right">0771-5850022-808</view>
+    </view>
+    <view class="content">
+      <view class="text_left">单位地址：</view>
+      <view class="text_right">广西南宁市民族大道77号幼师大厦二楼</view>
+    </view>
+ 
+
+
+
+  </view>
+   <view class="warning">
+      <view >注意：能开普票尽量开普票，别开专票</view>
+
+    </view>
+</view>

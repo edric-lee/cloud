@@ -38,7 +38,7 @@ Page({
         this.setData({
           winH:res.windowHeight
         })
-        
+
         
       }, fail(err) {
         console.log(err);
