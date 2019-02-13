@@ -50,11 +50,11 @@
         </i-grid-item>
       </i-grid>
       <i-grid>
-        <i-grid-item>
+        <i-grid-item bindtap="invoice">
           <i-grid-icon>
             <image src="../images/a5.png" />
           </i-grid-icon>
-          <i-grid-label>开票信息开发中</i-grid-label>
+          <i-grid-label>开票信息</i-grid-label>
         </i-grid-item>
         <i-grid-item>
           <i-grid-icon>

@@ -4,8 +4,9 @@
   <view class="cro_left_bottom"> </view>
   <view class="cro_right_bottom"></view>
   <view class="head">
-    <view class="logo"></view>
-    <view class="name">新东方</view>
+    <view class="logo">
+    <image src="../images/logo.png"  mode="widthFix"/></view>
+    <!-- <view class="name">南宁新东方</view> -->
   </view>
   <view class="body" style="height:{{winH*0.7-150}}px">
     <view class="content">
@@ -38,7 +39,7 @@
 
   </view>
    <view class="warning">
-      <view >注意：能开普票尽量开普票，别开专票</view>
+      <view >注意：请开普通发票</view>
 
     </view>
 </view>

@@ -28,6 +28,11 @@ Page({
       url: '../reim/reim'
     })
   },
+  invoice:function(){
+    wx.navigateTo({
+      url: '../invoice/invoice'
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

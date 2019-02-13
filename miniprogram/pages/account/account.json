@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "i-button": "../../component/iview/button/index"
-  }
+  },
+  "navigationBarTitleText": "学员款(建行)"
 }
