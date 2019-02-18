@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 4,
 			"list": [
 				{
 					"id": 0,
@@ -57,9 +57,10 @@
 				},
 				{
 					"id": 4,
-					"name": "index",
-					"pathName": "pages/travel/travel",
-					"query": ""
+					"name": "stpes",
+					"pathName": "pages/steps/steps",
+					"query": "",
+					"scene": null
 				},
 				{
 					"id": 5,

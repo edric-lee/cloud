@@ -4,8 +4,9 @@
         <view class="i-step-ico" wx:else>
             <i-icon i-class="i-step-ico-in" type="{{parse.getIcoClass(status,icon)}}"></i-icon>
         </view>
-        <view class="i-step-line" wx:if="{{ index !== len - 1 }}"></view>
+        <view class="i-step-line" wx:if="{{ index !== len -1 }}"></view>
     </view>
+    
     <view class="i-step-item-main">
         <view class="i-step-item-title" wx:if="{{title !== ''}}">
             {{title}}
@@ -20,6 +21,7 @@
             <slot name="content"></slot>
         </view>
     </view>
+    <view class="i-step-line" wx:if="{{ index !== len -1 }}"></view>
 </view>
 <wxs module="parse"> 
 var allStatus = ['wait','process','finish','error'];

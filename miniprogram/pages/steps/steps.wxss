@@ -1,0 +1,115 @@
+.line {
+  margin-left: 20rpx;
+   margin-top: -60px;  
+  height: 50px;
+  width: 1px;
+  background-color: #e9eaec;
+  
+}
+.line_after{
+  transition: all 0.3s ease-in-out 0s;
+  transform: translateY(0rpx);
+  margin-left: 20rpx;
+   margin-top: -60px;  
+  height: 50px;
+  width: 1px;
+  background-color: #2d8cf0;
+}
+.cu-steps{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.cu-item{
+  display: flex;
+  flex-direction: row;
+}
+ .step{ 
+   /* margin-top: 10px; */
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+} 
+.title{
+  margin-top: 10px;
+  height: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1c2438;
+}.content{
+  margin-top: 20px;
+  height: 50px;
+  font-size: 14px;
+}
+.img{
+
+margin-top: 40px;
+margin-left: 400rpx;
+}
+
+.modal{
+  position: fixed;
+  width: 90%;
+  top: 30%;
+  right: 0;
+  bottom: 0;
+  left: 5%;
+  border-radius: 5rpx;
+
+}
+.zhezao{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  background:rgba(0,0,0,0.4);
+  overflow: hidden;
+  }
+.modalImg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 5px 5px 0 0;
+}
+.bar {
+  display: flex;
+  position: relative;
+  align-items: center;
+  background: #fff;
+  height: 100rpx;
+  justify-content: space-between;
+  border-radius: 0 0 5px 5px;
+}
+.bar .action {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  max-width: 100%;
+}
+.myView {
+  font-size: 35rpx;
+  margin: 20rpx;
+}
+ 
+.cBtn {
+  height: 100rpx;
+  margin-left: 300rpx;
+}
+ 
+.cs_button {
+  background-color: #fff;
+  border: 0px;
+  height: 100rpx;
+  position: fixed;
+  margin-left: 240rpx;
+}
+ 
+.cs_button:after {
+  border: 0px;
+}
+ 
+.cs_image {
+  width: 100rpx;
+  height: 100rpx;
+}
