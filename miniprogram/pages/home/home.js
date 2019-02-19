@@ -23,9 +23,9 @@ Page({
       url: '../account/account'
     })
   },
-  reim: function () {
+  process: function () {
     wx.navigateTo({
-      url: '../reim/reim'
+      url: '../process/process'
     })
   },
   invoice:function(){

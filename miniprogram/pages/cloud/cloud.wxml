@@ -1,0 +1,4 @@
+<button bindtap='process'>process</button>
+<button bindtap='steps'>steps</button>
+
+<!-- <button bindtap='del'>del</button> -->

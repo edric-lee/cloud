@@ -1,28 +1,43 @@
 const app = getApp();
+const db = wx.cloud.database()
+const steps = db.collection('steps')
 Page({
   data: {
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
     basics: 0,
-    list: {
-      process:'退费流程',
-    numList: [{
-      title: '步骤一',
-      name: '开始',
-      src: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/timg.jpg?sign=c25d8e7b4daf1d5b00791eadaf9d09c2&t=1550330559',
-    }, {
-      title: '步骤二',
-      name: '等待'
-    }, {
-      title: '步骤三',
-      name: '错误'
-    }, {
-      title: '步骤四',
-      name: '完成'
-        }]
-    },
+    // list: {
+    //   process:'退费流程',
+    // numList: [{
+    //   title: '步骤一',
+    //   name: '开始',
+    //   src: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/timg.jpg?sign=c25d8e7b4daf1d5b00791eadaf9d09c2&t=1550330559',
+    // }, {
+    //   title: '步骤二',
+    //   name: '等待'
+    // }, {
+    //   title: '步骤三',
+    //   name: '错误'
+    // }, {
+    //   title: '步骤四',
+    //   name: '完成'
+    //     }]
+    // },
     num: 0,
     scroll: 0
+  },
+  onLoad: function (options) {
+    var num = wx.getStorageSync('num');
+    steps.get({
+      success: res => {
+        console.log(res.data[num].list)
+        var listData = res.data[num].list
+        this.setData({
+          list: listData
+        })
+        console.log(this.data.list)
+      }
+    })
   },
   numSteps() {
     this.setData({

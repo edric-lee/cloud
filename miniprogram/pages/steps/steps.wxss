@@ -1,6 +1,6 @@
 .line {
   margin-left: 20rpx;
-   margin-top: -60px;  
+   margin-top: -50px;  
   height: 50px;
   width: 1px;
   background-color: #e9eaec;
@@ -10,7 +10,7 @@
   transition: all 0.3s ease-in-out 0s;
   transform: translateY(0rpx);
   margin-left: 20rpx;
-   margin-top: -60px;  
+   margin-top: -50px;  
   height: 50px;
   width: 1px;
   background-color: #2d8cf0;
@@ -28,6 +28,7 @@
    /* margin-top: 10px; */
   display: flex;
   flex-direction: column;
+  align-items: left;
   margin-left: 20px;
 } 
 .title{
@@ -36,15 +37,19 @@
   font-size: 14px;
   font-weight: 700;
   color: #1c2438;
+
 }.content{
-  margin-top: 20px;
+  margin-top: 10px;
   height: 50px;
+  width: 450rpx;
   font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;line-height: 30rpx;
 }
 .img{
-
-margin-top: 40px;
-margin-left: 400rpx;
+margin-top: 30px;
+margin-left: 50rpx;
 }
 
 .modal{
@@ -113,3 +118,15 @@ margin-left: 400rpx;
   width: 100rpx;
   height: 100rpx;
 }
+
+
+.img-plus-style {
+height: 80rpx;
+width: 80rpx;
+position: fixed;
+bottom: 250rpx;
+right: 30rpx;
+opacity: 0.95
+}
+.zindex100{z-index: 100}
+.yc{opacity: 0}

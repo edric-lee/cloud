@@ -42,7 +42,7 @@
         </i-grid-item>
 
 
-        <i-grid-item bindtap="reim">
+        <i-grid-item bindtap="process">
           <i-grid-icon>
             <image src="../images/a4.png" />
           </i-grid-icon>

@@ -9,7 +9,9 @@
     "pages/account/account",
     "pages/reim/reim",
     "pages/invoice/invoice",
-    "pages/steps/steps"
+    "pages/steps/steps",
+    "pages/process/process",
+    "pages/cloud/cloud"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

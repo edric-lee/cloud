@@ -7,30 +7,33 @@
   </view>
 </view>
 <view class='setp bg-white padding'>
+
   <view class='cu-steps' wx:for="{{list.numList}}" wx:key>
     <view class='cu-item {{index>num?"":"text-blue"}}'>
       <view class='num {{index==2?"":""}}' data-index='{{index + 1}}'></view>
       <view class='step'>
         <view class='title'>{{item.title}}</view>
-        <view class='content'>{{item.name}}</view>
+        <view class='content'>
+        <text decode="{{true}}">{{item.name}}</text></view>
       </view>
-      <view class='img'><button class='cu-btn bg-green shadow'bindtap="showModal" data-target="{{item.src}}" wx:if="{{item.src}}">样式</button></view>
+      <view class='img'>
+        <button class='cu-btn bg-green shadow' bindtap="showModal" data-target="{{item.src}}" wx:if="{{item.src}}">样式</button>
+      </view>
     </view>
-<view class=' {{index>num-1?"line":"line_after"}}' wx:if="{{ index !== list.numList.length -1  }}"></view>
+    <view class=' {{index>num-1?"line":"line_after"}}' wx:if="{{ index !== list.numList.length -1  }}"></view>
   </view>
+  
 </view>
 
-<view class='myView'>第一种方式实现：</view>
-<contact-button class='cBtn' type="default-dark" size="20" session-from="weapp">
-</contact-button>
-<view class='myView'>第二种方式实现：</view>
- <button class="cs_button" open-type="contact" session-from="weapp">
-  <image class="cs_image" src="../images/cs.png"></image>
-</button> 
+<view>
+    <contact-button class="img-plus-style zindex100 yc"></contact-button>
+    <image src="../images/kefu.png" class="img-plus-style" bindtap="calling"></image>
+</view>
+
 
 
 <view class="zhezao" hidden="{{flag}}" wx:if="{{showModal}}">
-  <view class="modal" >
+  <view class="modal">
     <view class="modalImg" style="background-image: url('{{url}}');height:200px;">
       <view class="cu-bar justify-end none-bg text-white">
         <view class='action' bindtap='hideModal'>
@@ -38,7 +41,7 @@
         </view>
       </view>
     </view>
-    <view class="bar" >
+    <view class="bar">
       <view class='action margin-0 flex-sub  solid-left' bindtap='hideModal'>我知道了</view>
     </view>
   </view>

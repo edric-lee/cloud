@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 4,
+			"current": 8,
 			"list": [
 				{
 					"id": 0,
@@ -37,9 +37,9 @@
 					"query": ""
 				},
 				{
-					"id": -1,
-					"name": "http",
-					"pathName": "pages/http/http",
+					"id": 1,
+					"name": "cloud",
+					"pathName": "pages/cloud/cloud",
 					"query": ""
 				},
 				{
@@ -84,8 +84,8 @@
 				},
 				{
 					"id": 8,
-					"name": "train",
-					"pathName": "pages/travel/travel",
+					"name": "process",
+					"pathName": "pages/process/process",
 					"query": "",
 					"scene": null
 				}

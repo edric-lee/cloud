@@ -1,0 +1,17 @@
+
+  <view id='{{item.nav}}' data-id='{{item.num}}'class='refund' wx:for="{{listData}}" wx:key bindtap="btn">
+
+
+    <view class="cro_left_top"></view>
+    <view class="cro_right_top"></view>
+    <view class="cro_left_bottom"> </view>
+    <view class="cro_right_bottom"></view>
+    <view class='left'>
+      <image src="{{item.img}}" />
+    </view>
+    <view class='right'>{{item.name}}
+
+
+    </view>
+
+  </view>
