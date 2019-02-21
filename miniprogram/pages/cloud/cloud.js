@@ -27,28 +27,45 @@ Page({
       // data 字段表示需新增的 JSON 数据
       data: {
         list: {
-          process: '退费流程',
+          process: '离职流程',
           numList: [{
-            title: '报名员',
-            name: '&ensp;&ensp;1、填写费用支出单\n2、打印退费凭据',
+            title: '离职人员',
+            name: '离职申请单填写部门和姓名',
             src: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/timg.jpg?sign=c25d8e7b4daf1d5b00791eadaf9d09c2&t=1550330559',
           }, {
-            title: '部门主管',
-              name: '&ensp;&ensp;签字审核'
+            title: '财务部：黄丽霞（非报名员跳过此步）',
+              name: '审核报名款是否清理完毕并盖章'
           }, {
-            title: '财务部：黄丽霞',
-              name: '&ensp;&ensp;审核退费真实性并盖章'
+            title: '财务部：黄芳萍',
+              name: '审核个人借款是否清理完毕并盖章'
           }, {
             title: '财务部：李玉坤',
-              name: '&ensp;&ensp;签字审核'
-            }, {
-              title: '校长',
-              name: '&ensp;&ensp;签字审核'
-            }, {
-              title: '财务部：黄芳萍',
-              name: '&ensp;&ensp;支付退费'
+              name: '签字审核'
             }]
-        },
+        }, 
+        // list: {
+        //   process: '退费流程',
+        //   numList: [{
+        //     title: '报名员',
+        //     name: '1、填写费用支出单\n2、打印退费凭据',
+        //     src: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/timg.jpg?sign=c25d8e7b4daf1d5b00791eadaf9d09c2&t=1550330559',
+        //   }, {
+        //     title: '部门主管',
+        //     name: '签字审核'
+        //   }, {
+        //     title: '财务部：黄丽霞',
+        //     name: '审核退费真实性并盖章'
+        //   }, {
+        //     title: '财务部：李玉坤',
+        //     name: '签字审核'
+        //   }, {
+        //     title: '校长',
+        //     name: '签字审核'
+        //   }, {
+        //     title: '财务部：黄芳萍',
+        //     name: '支付退费'
+        //   }]
+        // },
         // 为待办事项添加一个地理位置（113°E，23°N）
       },
       success(res) {

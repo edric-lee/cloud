@@ -46,7 +46,7 @@
           <i-grid-icon>
             <image src="../images/a4.png" />
           </i-grid-icon>
-          <i-grid-label>报销</i-grid-label>
+          <i-grid-label>财务流程</i-grid-label>
         </i-grid-item>
       </i-grid>
       <i-grid>
@@ -59,7 +59,7 @@
         <i-grid-item>
           <i-grid-icon>
             <image src="../images/a1.png" />
-          </i-grid-icon>财务流程开发中</i-grid-item>
+          </i-grid-icon>开发中</i-grid-item>
         <i-grid-item>
           <i-grid-icon>
             <image src="../images/a1.png" />
