@@ -31,6 +31,7 @@ Page({
           numList: [{
             title: '离职人员',
             name: '离职申请单填写部门和姓名',
+            model:'退费凭证',
             src: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/timg.jpg?sign=c25d8e7b4daf1d5b00791eadaf9d09c2&t=1550330559',
           }, {
             title: '财务部：黄丽霞（非报名员跳过此步）',

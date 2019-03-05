@@ -1,49 +1,47 @@
 .line {
   margin-left: 20rpx;
-   margin-top: -50px;  
+  margin-top: -50px;
   height: 50px;
   width: 1px;
   background-color: #e9eaec;
-  
 }
-.line_after{
+
+.line_after {
   transition: all 0.3s ease-in-out 0s;
   transform: translateY(0rpx);
   margin-left: 20rpx;
-   margin-top: -50px;  
+  margin-top: -50px;
   height: 50px;
   width: 1px;
   background-color: #2d8cf0;
 }
 
-.cu-steps{
+.cu-steps {
   display: flex;
   flex-direction: column;
   align-items: left;
 
 }
-.cu-item{
+
+.cu-item {
   display: flex;
   flex-direction: row;
   align-items: left;
+  width: 100%;
+}
 
+.icon {
   width: 100px;
 }
-.icon{
-  width: 100px;
 
-}
- .step{ 
-
+.step {
   display: flex;
-  flex-direction:  column;
-  /* align-items: left; */
-  /* justify-content:start; */
-
+  flex-direction: column;
+  /* align-items: left; *//* justify-content:start; */
   margin-left: 20px;
+}
 
-} 
-.title{
+.title {
   width: 100%;
   margin-top: 10px;
   height: 20px;
@@ -52,26 +50,29 @@
   color: #1c2438;
   display: flex;
   flex-direction: column;
+}
 
-
-}.content{
+.content {
   margin-top: 10px;
   height: 50px;
   width: 450rpx;
   font-size: 14px;
   display: flex;
   flex-direction: column;
-
   line-height: 30rpx;
 }
-.img{
-margin-top: 30px;
-margin-left: 50rpx;
+
+.img {
+  margin-top: 10rpx;
+  width: 1000px;
+  margin-left: 30rpx;
 }
-.text{
-  text-align:left;
+
+.text {
+  text-align: left;
 }
-.modal{
+
+.modal {
   position: fixed;
   width: 90%;
   top: 30%;
@@ -79,22 +80,24 @@ margin-left: 50rpx;
   bottom: 0;
   left: 5%;
   border-radius: 5rpx;
-
 }
-.zhezao{
-  position:fixed;
-  width:100%;
-  height:100%;
-  top:0px;
-  background:rgba(0,0,0,0.4);
+
+.zhezao {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.4);
   overflow: hidden;
-  }
+}
+
 .modalImg {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 5px 5px 0 0;
 }
+
 .bar {
   display: flex;
   position: relative;
@@ -104,6 +107,7 @@ margin-left: 50rpx;
   justify-content: space-between;
   border-radius: 0 0 5px 5px;
 }
+
 .bar .action {
   display: flex;
   align-items: center;
@@ -111,16 +115,17 @@ margin-left: 50rpx;
   justify-content: center;
   max-width: 100%;
 }
+
 .myView {
   font-size: 35rpx;
   margin: 20rpx;
 }
- 
+
 .cBtn {
   height: 100rpx;
   margin-left: 300rpx;
 }
- 
+
 .cs_button {
   background-color: #fff;
   border: 0px;
@@ -128,24 +133,29 @@ margin-left: 50rpx;
   position: fixed;
   margin-left: 240rpx;
 }
- 
+
 .cs_button:after {
   border: 0px;
 }
- 
+
 .cs_image {
   width: 100rpx;
   height: 100rpx;
 }
 
-
 .img-plus-style {
-height: 80rpx;
-width: 80rpx;
-position: fixed;
-bottom: 250rpx;
-right: 30rpx;
-opacity: 0.95
+  height: 80rpx;
+  width: 80rpx;
+  position: fixed;
+  bottom: 250rpx;
+  right: 30rpx;
+  opacity: 0.95;
 }
-.zindex100{z-index: 100}
-.yc{opacity: 0}
+
+.zindex100 {
+  z-index: 100;
+}
+
+.yc {
+  opacity: 0;
+}

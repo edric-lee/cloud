@@ -17,7 +17,7 @@
       <view class="td">{{item.matter}}</view>
       <view class="td">{{item.type}}</view>
       <view class="td">{{item.acce}}</view>
-      <button class='td cu-btn bg-green shadow' bindtap="showModal" data-target="{{item.src}}"style="width:10%;margin-right:5px">Image</button>
+      <button class='td cu-btn bg-green shadow' bindtap="showModal" data-target="{{item.src}}"style="width:10%;margin-right:5px">样板</button>
       <!-- <view class="td">{{item.img}}</view> -->
     </view>
 

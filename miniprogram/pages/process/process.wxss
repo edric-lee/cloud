@@ -12,6 +12,7 @@ page {
   background-color: white;
   display: flex;
   flex-direction: row;
+  border-radius: 5px;
 }
 
 .left {
