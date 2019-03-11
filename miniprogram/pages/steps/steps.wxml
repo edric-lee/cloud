@@ -22,7 +22,8 @@
         </view>
       </view>
       <view class='img'>
-        <button class='cu-btn bg-green shadow' bindtap="showModal" data-target="{{item.src}}" wx:if="{{item.src}}">{{item.model}}</button>
+        <!-- <button class='cu-btn bg-green shadow' bindtap="showModal" data-target="{{item.src}}" wx:if="{{item.src}}">{{item.model}}</button> -->
+        <button class='cu-btn bg-green shadow' bindtap="powerDrawer" data-statu="open" data-target="{{item.modelList}}" wx:if="{{item.modelList}}" data-model="{{item.modelList}}">附件</button>
       </view>
     </view>
     <view class=' {{index>num-1?"line":"line_after"}}' wx:if="{{ index !== list.numList.length -1  }}"></view>
@@ -42,12 +43,25 @@
     <view class="modalImg" style="background-image: url('{{url}}');height:200px;">
       <view class="cu-bar justify-end none-bg text-white">
         <view class='action' bindtap='hideModal'>
-          <text class='icon-close '></text>
+          <text class='icon-roundclosefill'></text>
         </view>
       </view>
     </view>
-    <view class="bar">
+    <!-- <view class="bar">
       <view class='action margin-0 flex-sub  solid-left' bindtap='hideModal'>我知道了</view>
-    </view>
+    </view> -->
+  </view>
+</view>
+
+
+
+<!--mask-->
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+  <!--drawer content-->
+  <view class="drawer_content" >
+    <view class="drawer_title"  bindtap="showModal" data-model="{{item.img}}" wx:for="{{model}}" wx:key>{{item.name}}</view>
   </view>
 </view>
