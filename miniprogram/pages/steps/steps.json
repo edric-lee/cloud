@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "i-steps": "../../component/iview/steps/index",
-    "i-step": "../../component/iview/step/index"
+    "i-step": "../../component/iview/step/index",
+    "i-notice-bar": "../../component/iview/notice-bar/index"
   }
 }

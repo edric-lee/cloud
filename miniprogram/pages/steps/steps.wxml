@@ -1,3 +1,9 @@
+<!-- 通告栏 -->
+<view>
+  <i-notice-bar icon="systemprompt" loop speed="2500">
+    注意！报销的发票请开具学校名称！
+  </i-notice-bar>
+</view>
 <view class="cu-bar bg-white solid-bottom margin-top">
   <view class='action'>
     <text class='icon-title text-orange'></text> {{list.process}}
@@ -61,7 +67,7 @@
 <!--使用animation属性指定需要执行的动画-->
 <view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
   <!--drawer content-->
-  <view class="drawer_content" >
-    <view class="drawer_title"  bindtap="showModal" data-model="{{item.img}}" wx:for="{{model}}" wx:key>{{item.name}}</view>
+  <view class="drawer_content">
+    <view class="drawer_title" bindtap="showModal" data-model="{{item.img}}" wx:for="{{model}}" wx:key>{{item.name}}</view>
   </view>
 </view>
