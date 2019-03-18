@@ -69,7 +69,7 @@
 }
 
 .text {
-  text-align: left;
+  text-align: right;
 }
 
 .modal {
