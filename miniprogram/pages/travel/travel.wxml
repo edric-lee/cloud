@@ -64,7 +64,7 @@
     </view>
     <view id="address_view">
       <label style="text-align:left" bindtap="startAirport" data-code="{{startName}}">{{startName}}</label>
-      <label class="price" style="text-align:center">{{max}}</label>
+      <label class="price" style="text-align:center">{{max*0.5}}</label>
       <label style="text-align:right" bindtap="endAirport" data-code="{{endName}}">{{endName}}</label>
     </view>
 

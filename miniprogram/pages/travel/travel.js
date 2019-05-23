@@ -176,25 +176,25 @@ Page({
     });
   },
   onLoad: function() {
-    role.get({
-      success: res => {
-        var financial = res.data[0].financial
-        if (financial.indexOf(wx.getStorageSync('openid')) == -1){
-          console.log("财务权限")
-          this.setData({
-            showOrHidden: false,
-            radioAir: false,
-            radioTrain: false,
-            radioOldtrain: false,
-          })
-        }
-        this.setData({
-          financial: financial
-        })
+    // role.get({
+    //   success: res => {
+    //     var financial = res.data[0].financial
+    //     if (financial.indexOf(wx.getStorageSync('openid')) == -1){
+    //       console.log("财务权限")
+    //       this.setData({
+    //         showOrHidden: false,
+    //         radioAir: false,
+    //         radioTrain: false,
+    //         radioOldtrain: false,
+    //       })
+    //     }
+    //     this.setData({
+    //       financial: financial
+    //     })
         
-        console.log(this.data.financial)
-      }
-    })
+    //     console.log(this.data.financial)
+    //   }
+    // })
 
     //出发站点
     var name1 = wx.getStorageSync('startName');

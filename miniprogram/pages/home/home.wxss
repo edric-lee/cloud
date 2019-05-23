@@ -81,3 +81,66 @@ page {
   margin-top: -46px;
   background-color: white;
 }
+/* .img-plus-style {
+  height: 180rpx;
+  width: 180rpx;
+  position: fixed;
+  top: 250rpx;
+  right: 50rpx;
+
+.zindex100 {
+  z-index: 9999;
+}
+
+.yc {
+  opacity: 0.5;
+}
+.img {
+  height: 100rpx;
+  width: 100rpx;
+}
+.pos{
+  position: fixed;
+  top: 250rpx;
+  right: 50rpx;
+}
+.kf{
+color: white;
+} */
+
+
+.cBtn {
+  height: 100rpx;
+  margin-left: 300rpx;
+}
+ 
+.cs_button {
+  /* border: 0px; */
+  height: 150rpx;
+  width: 150rpx;
+  position: fixed;
+  top: 240rpx;
+  right: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+}
+ 
+.cs_button:after {
+  border: 0px;
+}
+ 
+.cs_image {
+  width: 100rpx;
+  height: 100rpx;
+}
+.kf{
+  position: fixed;
+  top: 250rpx;
+  right: 40rpx;
+}
+.text{
+  color: white;
+}

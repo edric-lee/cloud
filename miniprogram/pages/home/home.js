@@ -87,14 +87,23 @@ Page({
           })
           wx.setStorageSync("openid", res.result.openid);
           console.log(res.result.openid)
-          console.log(res.result)
+          console.log(e.detail.userInfo)
+          // var countNum=userInfo.where({
+          //   _openid: res.result.openId
+          // }).count().then(res=>{
+          //   console.log(countNum)
+          // });
+          //console.log(res.result)
           userInfo.where({
-            _openid: res.result.openId
+            _openid: res.result.openid
           }).count().then(res => {
             if (res.total == 0) {
-              // console.log(res.detail)
               userInfo.add({
                 data: e.detail.userInfo
+              }).then(res => {
+                console.log(res)
+              }).catch(err => {
+                console.error(err)
               })
             }
           })
