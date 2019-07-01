@@ -1,0 +1,29 @@
+<view class="table">
+  <view class="tr bg-w" style="height: 2rem">
+    <view class="th" style="width:50%">报销事项</view>
+    <view class="th" style="width:25%">业务明细</view>
+    <view class="th" style="width:25%;padding-right:5px">借付类型</view>
+  </view>
+  <block wx:for="{{listData}}" wx:key="{{code}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td" style="width:50%">
+        <text decode='{{true}}'>{{item.matter}}</text>
+      </view>
+      <view class="td" style="text-align: left;width:25%">
+        <text decode='{{true}}'>{{item.detailed}}</text>
+      </view>
+      <view class="td" style="text-align: left;width:25%">
+        <text decode='{{true}}'>{{item.type}}</text>
+      </view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td" style="width:50%">{{item.matter}}</view>
+      <view class="td" style="text-align: left;width:25%">
+        <text decode='{{true}}'>{{item.detailed}}</text>
+      </view>
+      <view class="td" style="text-align: left;width:25%">
+        <text decode='{{true}}'>{{item.type}}</text>
+      </view>
+    </view>
+  </block>
+</view>

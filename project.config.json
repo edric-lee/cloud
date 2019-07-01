@@ -11,6 +11,8 @@
 	"appid": "wx4396fae2c57db290",
 	"projectname": "cloud",
 	"libVersion": "2.4.0",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -28,13 +30,14 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 8,
+			"current": 0,
 			"list": [
 				{
 					"id": 0,
-					"name": "account",
-					"pathName": "pages/account/account",
-					"query": ""
+					"name": "cost",
+					"pathName": "pages/cost/cost",
+					"query": "",
+					"scene": null
 				},
 				{
 					"id": 1,
@@ -51,9 +54,10 @@
 				},
 				{
 					"id": 3,
-					"name": "train",
-					"pathName": "pages/travel/travel",
-					"query": ""
+					"name": "cost",
+					"pathName": "pages/costClass/costClass",
+					"query": "",
+					"scene": null
 				},
 				{
 					"id": 4,
@@ -65,7 +69,7 @@
 				{
 					"id": 5,
 					"name": "auth",
-					"pathName": "pages/auth/auth",
+					"pathName": "pages/payClass/payClass",
 					"query": "",
 					"scene": null
 				},
@@ -76,9 +80,9 @@
 					"query": ""
 				},
 				{
-					"id": -1,
-					"name": "reim",
-					"pathName": "pages/reim/reim",
+					"id": 7,
+					"name": "reimbursement",
+					"pathName": "pages/reimbursement/reimbursement",
 					"query": "",
 					"scene": null
 				},
@@ -88,6 +92,12 @@
 					"pathName": "pages/process/process",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": 9,
+					"name": "reimbursement",
+					"pathName": "pages/reimbursement/reimbursement",
+					"query": ""
 				}
 			]
 		}

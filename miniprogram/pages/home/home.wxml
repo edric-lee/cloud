@@ -60,10 +60,10 @@
           <i-grid-icon>
             <image src="../images/a1.png" />
           </i-grid-icon>开发中</i-grid-item>
-        <i-grid-item>
+        <i-grid-item bindtap="tool">
           <i-grid-icon>
-            <image src="../images/a1.png" />
-          </i-grid-icon>开发中</i-grid-item>
+            <image src="../images/a8.png" />
+          </i-grid-icon>内部工具</i-grid-item>
       </i-grid>
     </view>
   </view>

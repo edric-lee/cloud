@@ -2,6 +2,9 @@ const db = wx.cloud.database()
 const steps = db.collection('steps')
 const process = db.collection('process')
 const reim = db.collection('reim')
+const costClass = db.collection('costClass')
+const payClass = db.collection('payClass')
+
 // pages/cloud/cloud.js
 Page({
 
@@ -157,13 +160,16 @@ Page({
       data: {
         list: [{
           matter: '部门季度团建',
-          acce: '1、发票\n2、《团建活动申请表》',
+          acce: '1、发票\n2、《团建活动申请表》\n3、打印团建照片',
           modelList: [{
             name: '费用支出单',
             img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/费用支出单(团建).png?sign=2cc60b6136a77cc4c92f095eda2e3381&t=1552899928'
           }, {
             name: '团建活动申请表',
             img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/南宁市新东方部门团建活动申请表.png?sign=26bf94b4fe53ac455ffc4c33ec83aebb&t=1552899845'
+          },{
+              name: '团建照片',
+              img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/%E5%9B%A2%E5%BB%BA%E7%85%A7%E7%89%87.png?sign=16fdc06de8ef14bc6a0eb43e7b2e1e53&t=1561710343'
           }]
         }, {
           matter: '出差差旅',
@@ -194,36 +200,76 @@ Page({
             name: '会议签到表',
             img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/会议签到表.png?sign=e98049baebc3caf0d22bb2dfe29ca1eb&t=1552979055'
           }]
+        }, {
+          matter: '物资采购',
+          acce: '1、发票\n2、采购申请\n3、打印：订单（电商采购）',
+          modelList: [{
+            name: '费用支出单',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/采购OA.png?sign=366bc1299d8b87e6df8d7a817e139561&t=1552982428'
           }, {
-            matter: '物资采购',
-            acce: '1、发票\n2、采购申请\n3、打印：订单（电商采购）',
-            modelList: [{
-              name: '费用支出单',
-              img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/采购OA.png?sign=366bc1299d8b87e6df8d7a817e139561&t=1552982428'
-            },{
-              name: '采购申请--800元以上',
-              img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/采购OA.png?sign=366bc1299d8b87e6df8d7a817e139561&t=1552982428'
-            }, {
-                name: '采购申请--800元以下(含800)',
-                img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/采购（纸质）.png?sign=63d3f8e7b65d69c8638fe8b8911fa24c&t=1552982402'
-            }, {
-              name: '订单',
-                img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/订单.png?sign=c215d6f80908c8ad9e4c2f394d58b4af&t=1552982454'
-            }]
+            name: '采购申请--800元以上',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/采购OA.png?sign=366bc1299d8b87e6df8d7a817e139561&t=1552982428'
           }, {
-            matter: '内外部招待费',
-            acce: '1、发票\n2、填写：《业务招待及礼品费用明细表》\n3、填写：《差旅及市内交通费用明细表》',
-            modelList: [{
-              name: '费用支出单',
-              img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/费用支出单（招待）.png?sign=398f03a01b749c8cfbcc1a9a019b33dc&t=1552984492'
-            },{
-              name: '业务招待及礼品费用明细表',
-                img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/业务招待及礼品费明细表.png?sign=d3dc97cbf4a2e87bd09af214a3dc1cad&t=1552983862'
-            }, {
-                name: '差旅及市内交通费用明细表',
-                img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/差旅费及室内交通费明细表.png?sign=b2bd895d0dfb3afb069341d444ba3a6a&t=1552983934'
-            }]
+            name: '采购申请--800元以下(含800)',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/采购（纸质）.png?sign=63d3f8e7b65d69c8638fe8b8911fa24c&t=1552982402'
+          }, {
+            name: '订单',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/订单.png?sign=c215d6f80908c8ad9e4c2f394d58b4af&t=1552982454'
           }]
+        }, {
+          matter: '内外部招待费',
+          acce: '1、发票\n2、填写：《业务招待及礼品费用明细表》\n3、填写：《差旅及市内交通费用明细表》',
+          modelList: [{
+            name: '费用支出单',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/费用支出单（招待）.png?sign=398f03a01b749c8cfbcc1a9a019b33dc&t=1552984492'
+          }, {
+            name: '业务招待及礼品费用明细表',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/业务招待及礼品费明细表.png?sign=d3dc97cbf4a2e87bd09af214a3dc1cad&t=1552983862'
+          }, {
+            name: '差旅及市内交通费用明细表',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/差旅费及室内交通费明细表.png?sign=b2bd895d0dfb3afb069341d444ba3a6a&t=1552983934'
+          }]
+        }]
+      },
+      success(res) {
+        console.log(res)
+      },
+      fail: console.error
+    })
+  },
+  costClass: function(e) {
+    costClass.add({
+      data: {
+        list: [{
+          matter: '活动场地租赁',
+          category: '市场推广费',
+          detailed: '市场活动费',
+          type: '活动执行费',
+        }, {
+          matter: '活动产生的相关租赁，餐饮费用',
+          category: '市场推广费',
+          detailed: '市场活动费',
+          type: '其他市场活动',
+        }]
+      },
+      success(res) {
+        console.log(res)
+      },
+      fail: console.error
+    })
+  },
+  payClass: function(e) {
+    payClass.add({
+      data: {
+        list: [{
+          matter: '一管借款或采购专员采购借款',
+          detailed: '申请借款',
+          type: '员工个人借款（短期使用）',
+        }, {
+          matter: '前台备用金',
+          detailed: '申请借款',
+          type: '员工公务备用（长期使用）',
+        }]
       },
       success(res) {
         console.log(res)

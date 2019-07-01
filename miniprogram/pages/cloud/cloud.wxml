@@ -1,4 +1,7 @@
 <button bindtap='process'>process</button>
 <button bindtap='steps'>steps</button>
 <button bindtap='reim'>reim</button>
+<button bindtap='scanCode'>扫码</button>
+<button bindtap='costClass'>costClass</button>
+<button bindtap='payClass'>payClass</button>
 <!-- <button bindtap='del'>del</button> -->

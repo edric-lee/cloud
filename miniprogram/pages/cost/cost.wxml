@@ -1,0 +1,14 @@
+<view class="main">
+  <view class="button">
+    <i-button bind:click="costClass" type="info">费用归类</i-button>
+  </view>
+  <view class="button">
+    <i-button bind:click="payClass" type="success">借付款归类</i-button>
+  </view>
+  <view class="button">
+    <i-button bind:click="reimbursement" type="warning">费用报销单据填写</i-button>
+  </view>
+  <view class="button">
+    <i-button bind:click="payment" type="error">预付单据填写</i-button>
+  </view>
+</view>

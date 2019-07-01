@@ -1,0 +1,3 @@
+<view wx:if='{{showOrHidden}}'>
+  <i-button class="scanInvoice" bind:click="scanInvoice" type="info">电子发票查重</i-button>
+</view>

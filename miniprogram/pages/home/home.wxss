@@ -81,32 +81,6 @@ page {
   margin-top: -46px;
   background-color: white;
 }
-/* .img-plus-style {
-  height: 180rpx;
-  width: 180rpx;
-  position: fixed;
-  top: 250rpx;
-  right: 50rpx;
-
-.zindex100 {
-  z-index: 9999;
-}
-
-.yc {
-  opacity: 0.5;
-}
-.img {
-  height: 100rpx;
-  width: 100rpx;
-}
-.pos{
-  position: fixed;
-  top: 250rpx;
-  right: 50rpx;
-}
-.kf{
-color: white;
-} */
 
 
 .cBtn {

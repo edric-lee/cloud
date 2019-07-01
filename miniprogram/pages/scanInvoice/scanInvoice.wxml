@@ -1,0 +1,42 @@
+<view class="main">
+  <view class="head">
+    <view>增值税电子普通发票</view>
+  </view>
+  <view class="content">
+    <view class="contentLeft">
+      <view class="contLeft">发票代码</view>
+      <view class="contLeft">发票号码</view>
+      <view class="contLeft">开票金额</view>
+      <view class="contLeft">开票日期</view>
+    </view>
+    <view class="contentRight">
+      <view class="contRight">{{invoiceCode}}</view>
+      <view class="contRight">{{invoiceNumber}}</view>
+      <view class="contRight">{{invoiceAmount}}</view>
+      <view class="contRight">{{billTime}}</view>
+    </view>
+  </view>
+</view>
+<view class="button">
+  <view class="scanCode">
+    <i-button class="scanCode" bind:click="scanCode" type="info">扫描</i-button>
+  </view>
+  <view class="scanCode">
+    <i-button class="sub" bind:click="sub" type="success">提交</i-button>
+  </view>
+
+</view>
+<view wx:for="{{invoiceList}}" wx:key>
+  <i-card title="发票号码：{{item.invoiceCode}}" extra="金额：{{item.invoiceAmount}}">
+    <view slot="content">提交日期：{{item.time}}</view>
+    <view slot="footer">提交人：{{item.sub}}</view>
+  </i-card>
+</view>
+
+<view class="ref" wx:if="{{ref}}">
+  <image src="../images/ref.png" mode="widthFix"></image>
+</view>
+
+<view class="cur" wx:if="{{cur}}">
+  <image src="../images/cur.png" mode="widthFix"></image>
+</view>

@@ -33,6 +33,11 @@ Page({
       url: '../invoice/invoice'
     })
   },
+  tool: function () {
+    wx.navigateTo({
+      url: '../tool/tool'
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

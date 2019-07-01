@@ -3,14 +3,20 @@
     "pages/home/home",
     "pages/travel/travel",
     "pages/http/http",
+    "pages/tool/tool",
     "pages/trainStation/trainStation",
     "pages/airport/airport",
     "pages/city/city",
     "pages/account/account",
     "pages/reim/reim",
+    "pages/cost/cost",
     "pages/invoice/invoice",
+    "pages/scanInvoice/scanInvoice",
     "pages/steps/steps",
     "pages/process/process",
+    "pages/reimbursement/reimbursement",
+    "pages/costClass/costClass",
+    "pages/payClass/payClass",
     "pages/cloud/cloud"
   ],
   "window": {
@@ -19,5 +25,6 @@
     "navigationBarBackgroundColor": "#2193b0",
     "navigationBarTitleText": "财务信息平台",
     "navigationBarTextStyle": "white"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

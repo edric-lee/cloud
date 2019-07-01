@@ -33,13 +33,12 @@
       <view class="text_left">单位地址：</view>
       <view class="text_right">广西南宁市民族大道77号幼师大厦二楼</view>
     </view>
- 
-
+    <view class="invoice"><image  src="../images/invoice.png"  mode="widthFix"></image></view>
 
 
   </view>
    <view class="warning">
       <view >注意：请开普通发票</view>
-
+        
     </view>
 </view>

@@ -43,7 +43,7 @@ page {
 } */
 
 .body {
-  margin-top: 90rpx;
+  margin-top: 60rpx;
 }
 
 .content {
@@ -68,9 +68,8 @@ page {
 }
 
 .warning {
-  width: 90%;
+  width: 25%;
   color: red;
-  margin: 60px auto;
 }
 
 .cro_left_top, .cro_right_top, .cro_left_bottom, .cro_right_bottom {
@@ -111,4 +110,8 @@ page {
   border-radius: 10px 0px 0px 0px;
   /* border-top: 1px solid #000;
   border-left: 1px solid #000; */
+}
+.invoice{
+  width: 40%;
+  margin: 0 auto;
 }
