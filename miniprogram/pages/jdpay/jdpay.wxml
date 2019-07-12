@@ -1,0 +1,57 @@
+<view class="table">
+  <view class="tr bg-w" style="height: 2rem">
+    <view class="th"style="width:30%">步骤</view>
+    <!-- <view class="th">类型</view> -->
+    <view class="th" style="width:50%">事项</view>
+    <view class="th" style="width:20%;padding-right:5px">图片</view>
+  </view>
+  <block wx:for="{{listData}}" wx:key="{{code}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td" style="width:30%">
+      <text decode='{{true}}'>{{item.matter}}</text></view>
+      <view class="td" style="text-align: left;width:50%"  >
+        <text decode='{{true}}'>{{item.acce}}</text>
+      </view>
+      <button class='cu-btn bg-green shadow' bindtap="powerDrawer" data-statu="open" data-target="{{item.modelList}}" data-model="{{item.modelList}}" style="width:20%;margin-right:5px">附件</button>
+
+      <!-- <view class="td">{{item.img}}</view> -->
+    </view>
+    <view class="tr" wx:else>
+      <view class="td" style="width:30%">{{item.matter}}</view>
+      <view class="td" style="text-align: left;width:50%" >
+        <text decode='{{true}}'>{{item.acce}}</text>
+      </view>
+
+      <button class='cu-btn bg-green shadow' bindtap="powerDrawer" data-statu="open" data-target="{{item.modelList}}" data-model="{{item.modelList}}" style="width:20%;margin-right:5px">附件</button>
+    </view>
+  </block>
+</view>
+
+
+
+<view class="zhezao" hidden="{{flag}}" wx:if="{{showModal}}">
+  <view class="modal">
+    <view class="modalImg" style="background-image: url('{{url}}');height:200px;">
+      <view class="cu-bar justify-end none-bg text-white">
+        <view class='action' bindtap='hideModal'>
+          <text class='icon-roundclosefill'></text>
+        </view>
+      </view>
+    </view>
+    <!-- <view class="bar">
+      <view class='action margin-0 flex-sub  solid-left' bindtap='hideModal'>我知道了</view>
+    </view> -->
+  </view>
+</view>
+
+
+<!--mask-->
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+  <!--drawer content-->
+  <view class="drawer_content">
+    <view class="drawer_title" bindtap="showModal" data-model="{{item.img}}" wx:for="{{model}}" wx:key>{{item.name}}</view>
+  </view>
+</view>

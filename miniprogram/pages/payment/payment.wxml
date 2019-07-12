@@ -1,0 +1,50 @@
+<view class="head">
+  <view class="step">预付单据填写步骤</view>
+  <image class="reim" src="../images/payment.png"></image>
+</view>
+
+<view class="body">
+  <view class="step">步骤一</view>
+  <image class="reim1" src="../images/payment1.png" mode="widthFix"></image>
+  <view class="explain">
+    <text class="cont">
+  文字描述
+</text>
+  </view>
+  <view class="step">步骤二</view>
+  <image class="reim1" src="../images/payment2.png" mode="widthFix"></image>
+  <view class="explain">
+    <text class="cont">文字描述</text>
+  </view>
+  <view class="step">步骤三</view>
+  <view>
+    <image class="reim1" src="../images/payment3.png" mode="widthFix"></image>
+  </view>
+  <view class="explain">
+    <text class="cont">
+  文字描述
+  </text>
+  </view>
+  <view class="step">步骤四</view>
+  <view>
+    <image class="reim1" src="../images/payment3.png" mode="widthFix"></image>
+  </view>
+  <view class="explain">
+    <text class="cont">
+  文字描述
+  </text>
+  </view>
+  <view class="step">步骤五</view>
+  <image class="reim1" src="../images/payment5.png" mode="widthFix"></image>
+  <view class="explain"><text class="cont">文字描述</text></view>
+  <view class="step">步骤六</view>
+  <image class="reim1" src="../images/payment6.png" mode="widthFix"></image>
+  <view class="explain"><text class="cont">
+文字描述
+  </text></view>
+    <view class="step">步骤七</view>
+  <image class="reim1" src="../images/payment7.png" mode="widthFix"></image>
+  <view class="explain"><text class="cont">
+文字描述
+  </text></view>
+</view>

@@ -4,6 +4,9 @@ const process = db.collection('process')
 const reim = db.collection('reim')
 const costClass = db.collection('costClass')
 const payClass = db.collection('payClass')
+const cost = db.collection('cost')
+const jdvsp = db.collection('jdvsp')
+const jdpay = db.collection('jdpay')
 
 // pages/cloud/cloud.js
 Page({
@@ -130,21 +133,22 @@ Page({
 
         }, {
           num: 1,
-          name: '离职',
+          name: '费控流程',
           img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/icon4.png?sign=16cb740c0b5d73464fd4f24223497357&t=1550559393',
-          nav: '../steps/steps'
+          nav: '../cost/cost'
 
-        }, {
+        },{
           num: 2,
-          name: '报销',
-          img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/icon2.png?sign=69dea021fd251586312ef8b24586ec37&t=1550559436',
-          nav: '../steps/steps'
-        }, {
-          num: 3,
           name: '报销附件',
           img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/icon3.png?sign=7624f4735a0952c43a6f938325134c7f&t=1550559511',
           nav: '../reim/reim'
-        }],
+        }, {
+          num: 3,
+          name: '京东慧采（建设中）',
+          img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp.png?sign=bf70814c71fb5cfe40e28ac01ac5cb8f&t=1562914515',
+          nav: ''
+        }
+      ],
         // 为待办事项添加一个地理位置（113°E，23°N）
       },
       success(res) {
@@ -521,5 +525,120 @@ Page({
       },
       fail: console.error
     })
-  }
+  },
+  cost: function(e) {
+    cost.add({
+      // data 字段表示需新增的 JSON 数据
+      data: {
+        cost: [{
+          num: 0,
+          name: '费用分类',
+          img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/note.png?sign=04bb30393ffd9bbf0f6df3396da00385&t=1562898592',
+          nav: '../costClass/costClass'
+
+        }, {
+          num: 1,
+          name: '借付款分类',
+          img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/note.png?sign=04bb30393ffd9bbf0f6df3396da00385&t=1562898592',
+          nav: '../payClass/payClass'
+
+        }, {
+          num: 2,
+          name: '报销填写',
+          img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/a5.png?sign=b20f83d1bcca9febd12bfa199fa9a011&t=1562898638',
+          nav: '../reimbursement/reimbursement'
+        }, {
+          num: 3,
+          name: '预付填写(开发中)',
+          img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/a5.png?sign=b20f83d1bcca9febd12bfa199fa9a011&t=1562898638',
+          nav: '../payment/payment'
+        }],
+        // 为待办事项添加一个地理位置（113°E，23°N）
+      },
+      success(res) {
+        // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
+        console.log(res)
+      },
+      fail: console.error
+    })
+    // console.log(product)
+  },
+  jdvsp: function(e) {
+    jdvsp.add({
+      // data 字段表示需新增的 JSON 数据
+      data: {
+        jdvsp: [{
+          num: 0,
+          name: '款项支付',
+          img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/a3.png?sign=beb88af9911768ec3fa7211cdd942a2f&t=1562915914',
+          nav: ''
+
+        }, {
+          num: 1,
+          name: '验收报销',
+          img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/truck.png?sign=7d29810887bb31a8d84930c0f510f16b&t=1562915826',
+          nav: ''
+
+        }],
+        // 为待办事项添加一个地理位置（113°E，23°N）
+      },
+      success(res) {
+        // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
+        console.log(res)
+      },
+      fail: console.error
+    })
+    // console.log(product)
+  },
+  jdpay: function(e) {
+    jdpay.add({
+      data: {
+        list: [{
+          matter: '一、准备资料',
+          acce: '1、OA采购申请（资产负责人已审批）\n2、京东慧采订单',
+          modelList: [{
+            name: 'OA采购申请',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/南宁市新东方部门团建活动申请表.png?sign=26bf94b4fe53ac455ffc4c33ec83aebb&t=1552899845'
+          }, {
+            name: '京东慧采订单',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/%E5%9B%A2%E5%BB%BA%E7%85%A7%E7%89%87.png?sign=16fdc06de8ef14bc6a0eb43e7b2e1e53&t=1561710343'
+          }]
+        }, {
+          matter: '二、费控付款',
+          acce: '1、编制费控付款单据\n2、付款单到会计复核',
+          modelList: [{
+            name: '预付单据',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/出差申请表.png?sign=3442d879020563458a1557f492566788&t=1552900373'
+          }]
+        }, {
+          matter: '三、单据传递财务何振',
+          acce: '1、打印OA申请\n2、打印京东慧采订单\n3、慧采订单上标注费控单号',
+          modelList: [{
+            name: 'OA采购申请',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/南宁市新东方部门团建活动申请表.png?sign=26bf94b4fe53ac455ffc4c33ec83aebb&t=1552899845'
+          }, {
+            name: '京东慧采订单',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/%E5%9B%A2%E5%BB%BA%E7%85%A7%E7%89%87.png?sign=16fdc06de8ef14bc6a0eb43e7b2e1e53&t=1561710343'
+          }, {
+            name: '慧采订单上标注费控单号',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/会议签到表.png?sign=e98049baebc3caf0d22bb2dfe29ca1eb&t=1552979055'
+          }]
+        }, {
+          matter: '四、查看付款记录',
+          acce: '1、查看费控单据状态（财务张文静已审核）\n2、查看电子付款凭证',
+          modelList: [{
+            name: '费控单据状态',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/采购OA.png?sign=366bc1299d8b87e6df8d7a817e139561&t=1552982428'
+          }, {
+            name: '查看电子付款凭证',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/采购（纸质）.png?sign=63d3f8e7b65d69c8638fe8b8911fa24c&t=1552982402'
+          }]
+        }]
+      },
+      success(res) {
+        console.log(res)
+      },
+      fail: console.error
+    })
+  },
 })

@@ -4,4 +4,7 @@
 <button bindtap='scanCode'>扫码</button>
 <button bindtap='costClass'>costClass</button>
 <button bindtap='payClass'>payClass</button>
+<button bindtap='cost'>cost</button>
+<button bindtap='jdvsp'>jdvsp</button>
+<button bindtap='jdpay'>jdpay</button>
 <!-- <button bindtap='del'>del</button> -->

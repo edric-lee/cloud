@@ -15,8 +15,12 @@
     "pages/steps/steps",
     "pages/process/process",
     "pages/reimbursement/reimbursement",
+    "pages/payment/payment",
     "pages/costClass/costClass",
     "pages/payClass/payClass",
+    "pages/jdvsp/jdvsp",
+    "pages/jdpay/jdpay",
+    "pages/jdreim/jdreim",
     "pages/cloud/cloud"
   ],
   "window": {
