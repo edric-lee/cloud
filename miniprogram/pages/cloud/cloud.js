@@ -595,7 +595,7 @@ Page({
       data: {
         list: [{
           matter: '一、准备资料',
-          acce: '1、OA采购申请（资产负责人已审批）\n2、京东慧采订单',
+          acce: '1、OA采购申请（步骤：采购执行人执行采购）\n2、京东慧采下订单',
           modelList: [{
             name: 'OA采购申请',
             img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/南宁市新东方部门团建活动申请表.png?sign=26bf94b4fe53ac455ffc4c33ec83aebb&t=1552899845'
@@ -604,14 +604,14 @@ Page({
             img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/%E5%9B%A2%E5%BB%BA%E7%85%A7%E7%89%87.png?sign=16fdc06de8ef14bc6a0eb43e7b2e1e53&t=1561710343'
           }]
         }, {
-          matter: '二、费控付款',
-          acce: '1、编制费控付款单据\n2、付款单到会计复核',
+          matter: '二、编制费控系统付款单',
+          acce: '系统编制费控付款单据，并把单据状态提交至主管会计审核',
           modelList: [{
             name: '预付单据',
             img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/出差申请表.png?sign=3442d879020563458a1557f492566788&t=1552900373'
           }]
         }, {
-          matter: '三、单据传递财务何振',
+          matter: '三、资料传递财务部何振',
           acce: '1、打印OA申请\n2、打印京东慧采订单\n3、慧采订单上标注费控单号',
           modelList: [{
             name: 'OA采购申请',
@@ -624,7 +624,7 @@ Page({
             img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/会议签到表.png?sign=e98049baebc3caf0d22bb2dfe29ca1eb&t=1552979055'
           }]
         }, {
-          matter: '四、查看付款记录',
+          matter: '四、查看付款进程',
           acce: '1、查看费控单据状态（财务张文静已审核）\n2、查看电子付款凭证',
           modelList: [{
             name: '费控单据状态',
