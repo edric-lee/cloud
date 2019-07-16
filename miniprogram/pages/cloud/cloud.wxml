@@ -7,4 +7,5 @@
 <button bindtap='cost'>cost</button>
 <button bindtap='jdvsp'>jdvsp</button>
 <button bindtap='jdpay'>jdpay</button>
+<button bindtap='jdreim'>jdreim</button>
 <!-- <button bindtap='del'>del</button> -->

@@ -7,6 +7,7 @@ const payClass = db.collection('payClass')
 const cost = db.collection('cost')
 const jdvsp = db.collection('jdvsp')
 const jdpay = db.collection('jdpay')
+const jdreim = db.collection('jdreim')
 
 // pages/cloud/cloud.js
 Page({
@@ -605,7 +606,7 @@ Page({
           }]
         }, {
           matter: '二、编制费控系统付款单',
-          acce: '系统编制费控付款单据，并把单据状态提交至主管会计审核',
+          acce: '系统编制费控付款单据，并把单据状态提交至“待主管会计审核”',
           modelList: [{
             name: '预付单据',
             img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/出差申请表.png?sign=3442d879020563458a1557f492566788&t=1552900373'
@@ -632,6 +633,47 @@ Page({
           }, {
             name: '查看电子付款凭证',
             img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/采购（纸质）.png?sign=63d3f8e7b65d69c8638fe8b8911fa24c&t=1552982402'
+          }]
+        }]
+      },
+      success(res) {
+        console.log(res)
+      },
+      fail: console.error
+    })
+  },
+  jdreim: function(e) {
+    jdreim.add({
+      data: {
+        list: [{
+          matter: '一、准备资料',
+          acce: '1、OA验收单\n2、京东电子发票',
+          modelList: [{
+            name: 'OA验收单',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/南宁市新东方部门团建活动申请表.png?sign=26bf94b4fe53ac455ffc4c33ec83aebb&t=1552899845'
+          }, {
+            name: '京东电子发票',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/%E5%9B%A2%E5%BB%BA%E7%85%A7%E7%89%87.png?sign=16fdc06de8ef14bc6a0eb43e7b2e1e53&t=1561710343'
+          }]
+        }, {
+          matter: '二、编制费控系统报销单',
+          acce: '系统编制费控报销单，并把单据状态提交至“待主管会计审核”',
+          modelList: [{
+            name: '报销单',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/出差申请表.png?sign=3442d879020563458a1557f492566788&t=1552900373'
+          }]
+        }, {
+          matter: '三、资料传递财务部何振',
+          acce: '1、打印OA验收单\n2、打印电子发票\n3、验收单单上标注费控单号',
+          modelList: [{
+            name: 'OA验收单',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/南宁市新东方部门团建活动申请表.png?sign=26bf94b4fe53ac455ffc4c33ec83aebb&t=1552899845'
+          }, {
+            name: '京东电子发票',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/%E5%9B%A2%E5%BB%BA%E7%85%A7%E7%89%87.png?sign=16fdc06de8ef14bc6a0eb43e7b2e1e53&t=1561710343'
+          }, {
+            name: '验收单上标注费控单号',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/会议签到表.png?sign=e98049baebc3caf0d22bb2dfe29ca1eb&t=1552979055'
           }]
         }]
       },
