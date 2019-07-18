@@ -25,6 +25,11 @@ Page({
       }
     })
   },
+  jdpayment: function () {
+    wx.navigateTo({
+      url: '../jdpayment/jdpayment'
+    })
+  },
   powerDrawer: function (e) {
     var currentStatu = e.currentTarget.dataset.statu;
     var model = e.target.dataset.model;
@@ -93,6 +98,16 @@ Page({
       flag: false,
       showModalStatus: false
     })
+    if(this.data.url=="../jdpayment/jdpayment"){
+      wx.navigateTo({
+        url: '../jdpayment/jdpayment'
+      })
+      this.setData({
+        showModal: false,
+        flag: true
+      })
+    }
+
   },
 
   hideModal(e) {

@@ -20,6 +20,8 @@
     "pages/payClass/payClass",
     "pages/jdvsp/jdvsp",
     "pages/jdpay/jdpay",
+    "pages/jdpayment/jdpayment",
+    "pages/jdreimment/jdreimment",
     "pages/jdreim/jdreim",
     "pages/cloud/cloud"
   ],

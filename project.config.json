@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 2,
 			"list": [
 				{
 					"id": 0,
@@ -47,8 +47,8 @@
 				},
 				{
 					"id": 2,
-					"name": "invoice",
-					"pathName": "pages/invoice/invoice",
+					"name": "jd",
+					"pathName": "pages/jdvsp/jdvsp",
 					"query": "",
 					"scene": null
 				},

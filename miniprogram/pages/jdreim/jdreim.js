@@ -93,6 +93,15 @@ Page({
       flag: false,
       showModalStatus: false
     })
+    if(this.data.url=="../jdreimment/jdreimment"){
+      wx.navigateTo({
+        url: '../jdreimment/jdreimment'
+      })
+      this.setData({
+        showModal: false,
+        flag: true
+      })
+    }
   },
 
   hideModal(e) {

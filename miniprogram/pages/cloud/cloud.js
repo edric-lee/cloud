@@ -596,43 +596,40 @@ Page({
       data: {
         list: [{
           matter: '一、准备资料',
-          acce: '1、OA采购申请（步骤：采购执行人执行采购）\n2、京东慧采下订单',
+          acce: '1、OA采购申请（资产部负责人：同意）\n2、京东慧采下订单',
           modelList: [{
             name: 'OA采购申请',
-            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/南宁市新东方部门团建活动申请表.png?sign=26bf94b4fe53ac455ffc4c33ec83aebb&t=1552899845'
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/OA%E9%87%87%E8%B4%AD%E7%94%B3%E8%AF%B7.png?sign=341b1a8a8237415619ad419d6771651a&t=1563431407'
           }, {
             name: '京东慧采订单',
-            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/%E5%9B%A2%E5%BB%BA%E7%85%A7%E7%89%87.png?sign=16fdc06de8ef14bc6a0eb43e7b2e1e53&t=1561710343'
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E6%85%A7%E9%87%87%E8%AE%A2%E5%8D%95.png?sign=ee2ccb141a2b07db9e3a3d385d1ad9cc&t=1563411021'
           }]
         }, {
           matter: '二、编制费控系统付款单',
           acce: '系统编制费控付款单据，并把单据状态提交至“待主管会计审核”',
           modelList: [{
             name: '预付单据',
-            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/出差申请表.png?sign=3442d879020563458a1557f492566788&t=1552900373'
+            img: '../jdpayment/jdpayment'
           }]
         }, {
           matter: '三、资料传递财务部何振',
           acce: '1、打印OA申请\n2、打印京东慧采订单\n3、慧采订单上标注费控单号',
           modelList: [{
             name: 'OA采购申请',
-            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/南宁市新东方部门团建活动申请表.png?sign=26bf94b4fe53ac455ffc4c33ec83aebb&t=1552899845'
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/OA%E7%94%B3%E8%AF%B7.png?sign=d20d31817ce650d414db5bff555450d7&t=1563431804'
           }, {
             name: '京东慧采订单',
-            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/%E5%9B%A2%E5%BB%BA%E7%85%A7%E7%89%87.png?sign=16fdc06de8ef14bc6a0eb43e7b2e1e53&t=1561710343'
+            url: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E8%B5%84%E4%BA%A7%E5%85%A5%E5%87%BA%E5%BA%93%E7%A1%AE%E8%AE%A4%E5%8D%95%E6%A0%87%E6%B3%A8.png?sign=7bff00e8aa888792e16c86158a38603a&t=1563354261'
           }, {
             name: '慧采订单上标注费控单号',
-            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/会议签到表.png?sign=e98049baebc3caf0d22bb2dfe29ca1eb&t=1552979055'
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E8%B5%84%E4%BA%A7%E5%85%A5%E5%87%BA%E5%BA%93%E7%A1%AE%E8%AE%A4%E5%8D%95%E6%A0%87%E6%B3%A8.png?sign=7bff00e8aa888792e16c86158a38603a&t=1563354261'
           }]
         }, {
           matter: '四、查看付款进程',
-          acce: '1、查看费控单据状态（财务张文静已审核）\n2、查看电子付款凭证',
+          acce: '1、查看费控单据状态（财务张文静已审核）',
           modelList: [{
             name: '费控单据状态',
-            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/采购OA.png?sign=366bc1299d8b87e6df8d7a817e139561&t=1552982428'
-          }, {
-            name: '查看电子付款凭证',
-            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/采购（纸质）.png?sign=63d3f8e7b65d69c8638fe8b8911fa24c&t=1552982402'
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E4%BB%98%E6%AC%BE.png?sign=4b18cb2e207722292787359b64a565c2&t=1563354668'
           }]
         }]
       },
@@ -650,30 +647,30 @@ Page({
           acce: '1、OA验收单\n2、京东电子发票',
           modelList: [{
             name: 'OA验收单',
-            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/南宁市新东方部门团建活动申请表.png?sign=26bf94b4fe53ac455ffc4c33ec83aebb&t=1552899845'
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E8%B5%84%E4%BA%A7%E5%85%A5%E5%87%BA%E5%BA%93%E7%A1%AE%E8%AE%A4%E5%8D%95%EF%BC%88%E7%94%B5%E8%84%91%EF%BC%89.png?sign=563756409b3ba26536ce0d6f63c85429&t=1563440290'
           }, {
             name: '京东电子发票',
-            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/%E5%9B%A2%E5%BB%BA%E7%85%A7%E7%89%87.png?sign=16fdc06de8ef14bc6a0eb43e7b2e1e53&t=1561710343'
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E4%BA%AC%E4%B8%9C%E6%85%A7%E9%87%87%E5%8F%91%E7%A5%A8.png?sign=e7ce5244455b4f7eb6d42451c57bb036&t=1563354136'
           }]
         }, {
           matter: '二、编制费控系统报销单',
           acce: '系统编制费控报销单，并把单据状态提交至“待主管会计审核”',
           modelList: [{
             name: '报销单',
-            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/出差申请表.png?sign=3442d879020563458a1557f492566788&t=1552900373'
+            img: '../jdreimment/jdreimment'
           }]
         }, {
           matter: '三、资料传递财务部何振',
           acce: '1、打印OA验收单\n2、打印电子发票\n3、验收单单上标注费控单号',
           modelList: [{
             name: 'OA验收单',
-            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/南宁市新东方部门团建活动申请表.png?sign=26bf94b4fe53ac455ffc4c33ec83aebb&t=1552899845'
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E8%B5%84%E4%BA%A7%E5%85%A5%E5%87%BA%E5%BA%93%E7%A1%AE%E8%AE%A4%E5%8D%95.png?sign=f342e0c39edcdd59e56118da806801f2&t=1563354181'
           }, {
             name: '京东电子发票',
-            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/%E5%9B%A2%E5%BB%BA%E7%85%A7%E7%89%87.png?sign=16fdc06de8ef14bc6a0eb43e7b2e1e53&t=1561710343'
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E4%BA%AC%E4%B8%9C%E6%85%A7%E9%87%87%E5%8F%91%E7%A5%A8.png?sign=e7ce5244455b4f7eb6d42451c57bb036&t=1563354136'
           }, {
             name: '验收单上标注费控单号',
-            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/SOP/会议签到表.png?sign=e98049baebc3caf0d22bb2dfe29ca1eb&t=1552979055'
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E8%B5%84%E4%BA%A7%E5%85%A5%E5%87%BA%E5%BA%93%E7%A1%AE%E8%AE%A4%E5%8D%95%E6%A0%87%E6%B3%A8.png?sign=7bff00e8aa888792e16c86158a38603a&t=1563354261'
           }]
         }]
       },
