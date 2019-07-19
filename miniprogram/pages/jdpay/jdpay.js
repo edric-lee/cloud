@@ -24,7 +24,24 @@ Page({
         console.log(this.data.listData)
       }
     })
+    wx.getSystemInfo({
+      success: res => {
+        //导航高度
+        this.setData({
+          winW:res.windowWidth
+        })
+
+        
+      }, fail(err) {
+        console.log(err);
+      }
+    })
   },
+
+
+
+
+
   jdpayment: function () {
     wx.navigateTo({
       url: '../jdpayment/jdpayment'
@@ -96,7 +113,8 @@ Page({
       url: e.target.dataset.model,
       showModal: true,
       flag: false,
-      showModalStatus: false
+      showModalStatus: false,
+      // imagewidth: url.imageWidth,
     })
     if(this.data.url=="../jdpayment/jdpayment"){
       wx.navigateTo({

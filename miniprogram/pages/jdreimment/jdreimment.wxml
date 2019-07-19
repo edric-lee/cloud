@@ -1,2 +1,5 @@
-<!--pages/jdreimment/jdreimment.wxml-->
-<text>pages/jdreimment/jdreimment.wxml</text>
+<view>
+  <i-notice-bar icon="systemprompt" loop speed="1500">
+    注意！步骤中，红框内容根据个人实际情况选择或填写，蓝框内容根据图中所示选择或填写（无需修改）！
+  </i-notice-bar>
+</view>

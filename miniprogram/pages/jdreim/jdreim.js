@@ -24,6 +24,18 @@ Page({
         console.log(this.data.listData)
       }
     })
+    wx.getSystemInfo({
+      success: res => {
+        //导航高度
+        this.setData({
+          winW:res.windowWidth
+        })
+
+        
+      }, fail(err) {
+        console.log(err);
+      }
+    })
   },
   powerDrawer: function (e) {
     var currentStatu = e.currentTarget.dataset.statu;

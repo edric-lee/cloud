@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "i-notice-bar": "../../component/iview/notice-bar/index"
+  },
   "navigationBarTitleText": "借款单操作步骤"
 }

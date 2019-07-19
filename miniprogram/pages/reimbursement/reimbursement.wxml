@@ -1,3 +1,8 @@
+<view>
+  <i-notice-bar icon="systemprompt" loop speed="1500">
+    注意！步骤中，红框内容根据个人实际情况选择或填写，蓝框内容根据图中所示选择或填写（无需修改）！
+  </i-notice-bar>
+</view>
 <view class="head">
   <view class="step">费用报销填写步骤</view>
   <image class="reim" src="../images/reim.png"></image>
