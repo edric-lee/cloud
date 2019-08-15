@@ -42,5 +42,34 @@ Page({
          console.log(this.data.list)
       }
     })
+    wx.getSystemInfo({
+      success: res => {
+        //导航高度
+        this.setData({
+          winW:res.windowWidth
+        })
+
+        
+      }, fail(err) {
+        console.log(err);
+      }
+    })
+  },
+  showModal(e) {
+    console.log(e.target.dataset.model)
+    this.setData({
+      url: e.target.dataset.model,
+      showModal: true,
+      flag: false,
+      showModalStatus: false
+    })
+  },
+
+  hideModal(e) {
+    this.setData({
+      showModal: false,
+      flag: true
+    })
   }
+
 })

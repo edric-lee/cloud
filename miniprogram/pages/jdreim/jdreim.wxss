@@ -113,3 +113,23 @@
   text-align: center;
   border-bottom:  1px solid  rgba(0, 0, 0, 0.1); 
 }
+
+.process{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.buttom{
+  height: 50px;
+  width: 28%;
+  background-color: white;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: #2193b0;
+  color: white;
+}

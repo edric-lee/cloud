@@ -55,3 +55,13 @@
     <view class="drawer_title" bindtap="showModal" data-model="{{item.img}}" wx:for="{{model}}" wx:key>{{item.name}}</view>
   </view>
 </view>
+
+<view class="process" >
+  <view class="buttom" bindtap="showModal" data-model="https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E4%B8%BB%E6%B5%81%E7%A8%8B.jpg?sign=a5108212bf900cb50ec352b7f6454404&t=1565847882">
+  主流程
+  </view>
+    <view class="buttom" bindtap="showModal" data-model="https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E6%8A%A5%E9%94%80%E6%B5%81%E7%A8%8B.jpg?sign=5834736d841beb37732e8ecf6174ce1c&t=1565850368">
+  报销流程
+  </view>
+
+</view>

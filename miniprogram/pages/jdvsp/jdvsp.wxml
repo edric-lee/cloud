@@ -15,3 +15,27 @@
     </view>
 
   </view>
+
+<view class="process" >
+  <view class="buttom" bindtap="showModal" data-model="https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E4%B8%BB%E6%B5%81%E7%A8%8B.jpg?sign=a5108212bf900cb50ec352b7f6454404&t=1565847882">
+  主流程
+  </view>
+  <view class="buttom" bindtap="showModal" data-model="https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E4%BB%98%E6%AC%BE%E6%B5%81%E7%A8%8B.jpg?sign=c7920c16ee7cbe5c3ab7035eb22b431a&t=1565850350">
+  付款流程
+  </view>
+    <view class="buttom" bindtap="showModal" data-model="https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E6%8A%A5%E9%94%80%E6%B5%81%E7%A8%8B.jpg?sign=5834736d841beb37732e8ecf6174ce1c&t=1565850368">
+  报销流程
+  </view>
+</view>
+
+<view class="zhezao" hidden="{{flag}}" wx:if="{{showModal}}">
+  <view class="modal">
+    <view class="modalImg" style="background-image: url('{{url}}');width: {{winW}}px;" >
+      <view class="cu-bar justify-end none-bg text-white">
+        <view class='action' bindtap='hideModal'>
+          <text class='icon-roundclose'></text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
