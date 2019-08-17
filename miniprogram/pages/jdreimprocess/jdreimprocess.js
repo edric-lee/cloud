@@ -1,4 +1,4 @@
-// pages/jdreimprocess/jdreimprocess.js
+// pages/jdpayprocess/jdpayprocess.js
 Page({
 
   /**
@@ -16,16 +16,20 @@ Page({
       success: res => {
         //导航高度
         this.setData({
-          winH:res.windowHeight
+          winH: res.windowHeight
         })
 
-        
+
       }, fail(err) {
         console.log(err);
       }
     })
   },
-
+  jdreim: function () {
+    wx.navigateTo({
+      url: '../jdreim/jdreim'
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

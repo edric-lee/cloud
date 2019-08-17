@@ -1,8 +1,9 @@
+
 <view class="main" style="height: {{winH*0.98}}px">
     <view class="head">
         财务付款流程
     </view>
-    <view class="body">
+    <view class="body" bindtap="jdpay">
         <view class="left">
             <view class="left_title">
                 提交准备资料

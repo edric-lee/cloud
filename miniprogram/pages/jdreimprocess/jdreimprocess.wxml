@@ -1,134 +1,81 @@
 <view class="main" style="height: {{winH*0.98}}px">
     <view class="head">
-        京东慧采流程
+        财务报销流程
     </view>
-    <view class="body">
+    <view class="body" bindtap="jdreim">
         <view class="left">
             <view class="left_title">
-                采购申请
+                提交准备资料
             </view>
             <view class="left_content">
-                采购执行
+                操作费控系统
             </view>
-            <view class="left_content" >
-                付款
-            </view>
-            <view class="left_content">
-                采购执行
-            </view>
-            <view class="left_content">
-                报销
+            <view class="left_content3" >
+                费用审批环节
             </view>
         </view>
         <view class="mid">
             <view class="title">
-                流程
+                步骤
             </view>
             <view class="content">
                 <view class="icon_top">
-                    
-                </view>
-                <view class="text">
-                    OA采购申请
-                </view>
-                <view class="icon_buttom">
-                    <text class='icon-refresharrow'></text>
-                </view>
-            </view>
-            <view class="content">
-                <view class="icon_top">
-                    <text class='icon-refresharrow'></text>
-                </view>
-                <view class="text">
-                    操作京东慧采
-                </view>
-                <view class="icon_buttom">
-                    <text class='icon-refresharrow'></text>
-                </view>
-            </view>
-            <view class="content" bindtap="pay">
-                <view class="icon_top">
-                    <text class='icon-refresharrow'></text>
-                </view>
-                <view class="text" style="background-color: #E54B4B;">
-                    财务付款
-                </view>
-                <view class="icon_buttom">
-                    <text class='icon-refresharrow'></text>
-                </view>
-            </view>
-            <view class="content">
-                <view class="icon_top">
-                    <text class='icon-refresharrow'></text>
+            
                 </view>
                 <view class="text_two">
                     <view class="text_two_text">
-                        订单确认
+                        打印OA申请
                     </view>
                     <view class="text_two_text">
-                        物资验收
+                        打印京东慧采订单
                     </view>
                 </view>
                 <view class="icon_buttom">
                     <text class='icon-refresharrow'></text>
                 </view>
             </view>
-            <view class="content" bindtap="reim">
+            <view class="content">
                 <view class="icon_top">
                     <text class='icon-refresharrow'></text>
                 </view>
-                <view class="text" style="background-color: #32B67A;">
-                    财务报销
+                <view class="text">
+                    费用系统制作报销单
                 </view>
                 <view class="icon_buttom">
-                 
+                    <text class='icon-refresharrow'></text>
                 </view>
             </view>
+            <view class="content3">
+                <view class="icon_top3">
+                    <text class='icon-refresharrow'></text>
+                </view>
+                <view class="text3">
+                    <view class="text_mar">
+                    <text>
+                        会计何振审核\n（9：00-12:00）
+                    </text>
+                    </view>
+                </view>
+                <view class="icon_buttom3">
+                    <text class='icon-refresharrow'></text>
+                </view>
+                <view class="text3">
+                    <view class="text_mar">
+                    <text>
+                    财务总监审批\n（15：00-16:00）
+                    </text>
+                    </view>
+                </view>
+                <view class="icon_buttom3">
+                    <text class='icon-refresharrow'></text>
+                </view>
+                <view class="text3">
+                    校长
+                </view>
+            </view>
+            
+
         </view>
-        <view class="right">
-            <view class="title">
-                对接部门
-            </view>
-            <view class="content">
-                <view class="icon_top">
-                    
-                </view>
-                <view class="text">
-                    资产部
-                </view>
-            </view>
-            <view class="content">
-                <view class="icon_top">
-                    
-                </view>
-                <view class="text">
-                    资产部
-                </view>
-            </view>
-            <view class="content" bindtap="pay">
-                <view class="icon_top">
-                    
-                </view>
-                <view class="text" style="background-color: #E54B4B;">
-                    财务部
-                </view>
-            </view>
-            <view class="content">
-                <view class="icon_top">
-                    
-                </view>
-                <view class="text">
-                    资产部
-                </view>
-            </view>
-            <view class="content" bindtap="reim">
-                <view class="icon_top">
-                    
-                </view>
-                <view class="text" style="background-color: #32B67A;">
-                    财务部
-                </view>
-            </view>
-        </view>
+       
     </view>
 </view>

@@ -27,7 +27,7 @@ Page({
   },
   reim:function(){
     wx.navigateTo({
-      url: '../invoice/invoice'
+      url: '../jdreimprocess/jdreimprocess'
     })
   },
   pay:function(){
