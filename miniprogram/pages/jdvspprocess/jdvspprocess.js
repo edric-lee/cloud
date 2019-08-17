@@ -32,7 +32,7 @@ Page({
   },
   pay:function(){
     wx.navigateTo({
-      url: '../invoice/invoice'
+      url: '../jdpayprocess/jdpayprocess'
     })
   },
   /**

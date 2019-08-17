@@ -1,6 +1,6 @@
 <view class="main" style="height: {{winH*0.98}}px">
     <view class="head">
-        京东慧采流程
+        财务付款流程
     </view>
     <view class="body">
         <view class="left">
@@ -53,20 +53,21 @@
                     <text class='icon-refresharrow'></text>
                 </view>
                 <view class="text3">
-                    <view>
+                    <view class="text_mar">
                     <text>
-                    会计何振审核
+                        会计何振审核\n（9：00-12:00）
                     </text>
-                    <text>（9：00-12:00）</text>
                     </view>
                 </view>
                 <view class="icon_buttom3">
                     <text class='icon-refresharrow'></text>
                 </view>
                 <view class="text3">
+                    <view class="text_mar">
                     <text>
                     财务总监审批\n（15：00-16:00）
                     </text>
+                    </view>
                 </view>
                 <view class="icon_buttom3">
                     <text class='icon-refresharrow'></text>
@@ -83,9 +84,11 @@
                     <text class='icon-refresharrow'></text>
                 </view>
                 <view class="text">
+                <view class="text_mar">
                 <text>
                     出纳张文静付款\n（校长审批后次日18:00前）
                     </text>
+                    </view>
                 </view>
                 <view class="icon_buttom">
                     <text class='icon-refresharrow'></text>

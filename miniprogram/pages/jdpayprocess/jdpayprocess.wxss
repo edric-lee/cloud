@@ -76,6 +76,7 @@
     font-size: 30rpx;
     background-color: #E54B4B;
     color: white;
+    text-align: center;
 }
 .text_two{
     height: 60%;
@@ -148,5 +149,7 @@
     background-color: #E54B4B;
     color: white;
     text-align: center;
-    padding-top: 0px;
+}
+.text_mar{
+    margin-top: -10px;
 }
