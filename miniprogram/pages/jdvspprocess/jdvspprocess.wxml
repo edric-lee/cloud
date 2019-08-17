@@ -1,0 +1,129 @@
+<view class="main" style="height: {{winH*0.98}}px">
+    <view class="head">
+        京东慧采流程
+    </view>
+    <view class="body">
+        <view class="left">
+            <view class="left_title">
+                采购申请
+            </view>
+            <view class="left_content">
+                采购执行
+            </view>
+            <view class="left_content">
+                付款
+            </view>
+            <view class="left_content">
+                采购执行
+            </view>
+            <view class="left_content">
+                报销
+            </view>
+        </view>
+        <view class="mid">
+            <view class="title">
+                流程
+            </view>
+            <view class="content">
+                <view class="icon_top">
+                    
+                </view>
+                <view class="text">
+                    OA采购申请
+                </view>
+                <view class="icon_buttom">
+                    <text class='icon-refresharrow'></text>
+                </view>
+            </view>
+            <view class="content">
+                <view class="icon_top">
+                    <text class='icon-refresharrow'></text>
+                </view>
+                <view class="text">
+                    操作京东慧采
+                </view>
+                <view class="icon_buttom">
+                    <text class='icon-refresharrow'></text>
+                </view>
+            </view>
+            <view class="content">
+                <view class="icon_top">
+                    <text class='icon-refresharrow'></text>
+                </view>
+                <view class="text">
+                    财务付款
+                </view>
+                <view class="icon_buttom">
+                    <text class='icon-refresharrow'></text>
+                </view>
+            </view>
+            <view class="content">
+                <view class="icon_top">
+                    <text class='icon-refresharrow'></text>
+                </view>
+                <view class="text">
+                    订单确认及收货
+                </view>
+                <view class="icon_buttom">
+                    <text class='icon-refresharrow'></text>
+                </view>
+            </view>
+            <view class="content">
+                <view class="icon_top">
+                    <text class='icon-refresharrow'></text>
+                </view>
+                <view class="text">
+                    财务报销
+                </view>
+                <view class="icon_buttom">
+                 
+                </view>
+            </view>
+        </view>
+        <view class="right">
+            <view class="title">
+                对接部门
+            </view>
+            <view class="content">
+                <view class="icon_top">
+                    
+                </view>
+                <view class="text">
+                    资产部
+                </view>
+            </view>
+            <view class="content">
+                <view class="icon_top">
+                    
+                </view>
+                <view class="text">
+                    资产部
+                </view>
+            </view>
+            <view class="content">
+                <view class="icon_top">
+                    
+                </view>
+                <view class="text">
+                    财务部
+                </view>
+            </view>
+            <view class="content">
+                <view class="icon_top">
+                    
+                </view>
+                <view class="text">
+                    资产部
+                </view>
+            </view>
+            <view class="content">
+                <view class="icon_top">
+                    
+                </view>
+                <view class="text">
+                    财务部
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
