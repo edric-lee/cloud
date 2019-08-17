@@ -1,0 +1,97 @@
+<view class="main" style="height: {{winH*0.98}}px">
+    <view class="head">
+        京东慧采流程
+    </view>
+    <view class="body">
+        <view class="left">
+            <view class="left_title">
+                提交准备资料
+            </view>
+            <view class="left_content">
+                操作费控系统
+            </view>
+            <view class="left_content3" >
+                费用审批环节
+            </view>
+            <view class="left_content">
+                付款
+            </view>
+        </view>
+        <view class="mid">
+            <view class="title">
+                步骤
+            </view>
+            <view class="content">
+                <view class="icon_top">
+            
+                </view>
+                <view class="text_two">
+                    <view class="text_two_text">
+                        打印OA申请
+                    </view>
+                    <view class="text_two_text">
+                        打印京东慧采订单
+                    </view>
+                </view>
+                <view class="icon_buttom">
+                    <text class='icon-refresharrow'></text>
+                </view>
+            </view>
+            <view class="content">
+                <view class="icon_top">
+                    <text class='icon-refresharrow'></text>
+                </view>
+                <view class="text">
+                    费用系统制作付款单
+                </view>
+                <view class="icon_buttom">
+                    <text class='icon-refresharrow'></text>
+                </view>
+            </view>
+            <view class="content3">
+                <view class="icon_top3">
+                    <text class='icon-refresharrow'></text>
+                </view>
+                <view class="text3">
+                    <view>
+                    <text>
+                    会计何振审核
+                    </text>
+                    <text>（9：00-12:00）</text>
+                    </view>
+                </view>
+                <view class="icon_buttom3">
+                    <text class='icon-refresharrow'></text>
+                </view>
+                <view class="text3">
+                    <text>
+                    财务总监审批\n（15：00-16:00）
+                    </text>
+                </view>
+                <view class="icon_buttom3">
+                    <text class='icon-refresharrow'></text>
+                </view>
+                <view class="text3">
+                    校长
+                </view>
+                <view class="icon_buttom3">
+                    <text class='icon-refresharrow'></text>
+                </view>
+            </view>
+            <view class="content">
+                <view class="icon_top">
+                    <text class='icon-refresharrow'></text>
+                </view>
+                <view class="text">
+                <text>
+                    出纳张文静付款\n（校长审批后次日18:00前）
+                    </text>
+                </view>
+                <view class="icon_buttom">
+                    <text class='icon-refresharrow'></text>
+                </view>
+            </view>
+        </view>
+       
+    </view>
+</view>

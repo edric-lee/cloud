@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 4,
 			"list": [
 				{
 					"id": 0,
@@ -62,7 +62,7 @@
 				{
 					"id": 4,
 					"name": "jdpay",
-					"pathName": "pages/jdpay/jdpay",
+					"pathName": "pages/jdpayprocess/jdpayprocess",
 					"query": "",
 					"scene": null
 				},
