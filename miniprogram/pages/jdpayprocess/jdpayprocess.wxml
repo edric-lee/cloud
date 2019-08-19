@@ -3,7 +3,7 @@
     <view class="head">
         财务付款流程
     </view>
-    <view class="body" bindtap="jdpay">
+    <view class="body" bindtap="powerDrawer" data-statu="open">
         <view class="left">
             <view class="left_title">
                 提交准备资料
@@ -98,4 +98,30 @@
         </view>
        
     </view>
+</view>
+
+<view class="zhezao" hidden="{{flag}}" wx:if="{{showModal}}">
+  <view class="modal">
+    <view class="modalImg" style="background-image: url('{{url}}');width: {{winW}}px;" mode="widthFix">
+      <view class="cu-bar justify-end none-bg text-white">
+        <view class='action' bindtap='hideModal'>
+          <text class='icon-roundclosefill'></text>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>
+<!-- mask -->
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+<!-- content -->
+<!-- 使用animation属性指定需要执行的动画 -->
+<view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+  <!-- drawer content -->
+  <view class="drawer_content">
+    <view class="drawer_title" bindtap="showModal" data-model="{{item.img}}" wx:for="{{listData}}" wx:key>
+      {{item.name}}
+    </view>
+
+  </view>
 </view>

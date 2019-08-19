@@ -49,7 +49,7 @@ Page({
   },
   powerDrawer: function (e) {
     var currentStatu = e.currentTarget.dataset.statu;
-    var model = e.target.dataset.model;
+    var model = this.data.listData
     console.log(model)
     this.util(currentStatu)
     this.setData({

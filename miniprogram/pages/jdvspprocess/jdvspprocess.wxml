@@ -50,8 +50,10 @@
                 <view class="icon_top">
                     <text class='icon-refresharrow'></text>
                 </view>
-                <view class="text" style="background-color: #E54B4B;">
+                <view class="text" style="background-color: #E54B4B;text-decoration:underline">
+                   
                     财务付款
+                    
                 </view>
                 <view class="icon_buttom">
                     <text class='icon-refresharrow'></text>
@@ -77,7 +79,7 @@
                 <view class="icon_top">
                     <text class='icon-refresharrow'></text>
                 </view>
-                <view class="text" style="background-color: #32B67A;">
+                <view class="text" style="background-color: #32B67A;text-decoration:underline">
                     财务报销
                 </view>
                 <view class="icon_buttom">

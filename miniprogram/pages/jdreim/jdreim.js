@@ -41,6 +41,7 @@ Page({
     var currentStatu = e.currentTarget.dataset.statu;
     var model = e.target.dataset.model;
     console.log(model)
+    console.log(22)
     this.util(currentStatu)
     this.setData({
       model: model
@@ -99,6 +100,7 @@ Page({
    */
   showModal(e) {
     console.log(e.target.dataset.model)
+    onsole.log(11)
     this.setData({
       url: e.target.dataset.model,
       showModal: true,

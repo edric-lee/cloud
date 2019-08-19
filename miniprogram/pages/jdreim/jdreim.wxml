@@ -52,7 +52,7 @@
 <view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
   <!--drawer content-->
   <view class="drawer_content">
-    <view class="drawer_title" bindtap="showModal" data-model="{{item.img}}" wx:for="{{model}}" wx:key>{{item.name}}</view>
+    <view class="drawer_title" bindtap="showModal" data-model="{{item.img}}" wx:for="{{model}}" wx:key>{{model}}</view>
   </view>
 </view>
 
