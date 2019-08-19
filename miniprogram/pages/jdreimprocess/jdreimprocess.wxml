@@ -1,0 +1,81 @@
+<view class="main" style="height: {{winH*0.98}}px">
+    <view class="head">
+        财务报销流程
+    </view>
+    <view class="body" bindtap="jdreim">
+        <view class="left">
+            <view class="left_title">
+                提交准备资料
+            </view>
+            <view class="left_content">
+                操作费控系统
+            </view>
+            <view class="left_content3" >
+                费用审批环节
+            </view>
+        </view>
+        <view class="mid">
+            <view class="title">
+                步骤
+            </view>
+            <view class="content">
+                <view class="icon_top">
+            
+                </view>
+                <view class="text_two">
+                    <view class="text_two_text">
+                        打印OA申请
+                    </view>
+                    <view class="text_two_text">
+                        打印京东慧采订单
+                    </view>
+                </view>
+                <view class="icon_buttom">
+                    <text class='icon-refresharrow'></text>
+                </view>
+            </view>
+            <view class="content">
+                <view class="icon_top">
+                    <text class='icon-refresharrow'></text>
+                </view>
+                <view class="text">
+                    费用系统制作报销单
+                </view>
+                <view class="icon_buttom">
+                    <text class='icon-refresharrow'></text>
+                </view>
+            </view>
+            <view class="content3">
+                <view class="icon_top3">
+                    <text class='icon-refresharrow'></text>
+                </view>
+                <view class="text3">
+                    <view class="text_mar">
+                    <text>
+                        会计何振审核\n（9：00-12:00）
+                    </text>
+                    </view>
+                </view>
+                <view class="icon_buttom3">
+                    <text class='icon-refresharrow'></text>
+                </view>
+                <view class="text3">
+                    <view class="text_mar">
+                    <text>
+                    财务总监审批\n（15：00-16:00）
+                    </text>
+                    </view>
+                </view>
+                <view class="icon_buttom3">
+                    <text class='icon-refresharrow'></text>
+                </view>
+                <view class="text3">
+                    校长
+                </view>
+            </view>
+            
+
+        </view>
+       
+    </view>
+</view>

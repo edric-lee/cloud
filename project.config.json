@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 5,
 			"list": [
 				{
 					"id": 0,
@@ -48,7 +48,7 @@
 				{
 					"id": 2,
 					"name": "jd",
-					"pathName": "pages/jdvsp/jdvsp",
+					"pathName": "pages/jdvspprocess/jdvspprocess",
 					"query": "",
 					"scene": null
 				},
@@ -62,14 +62,14 @@
 				{
 					"id": 4,
 					"name": "jdpay",
-					"pathName": "pages/jdpay/jdpay",
+					"pathName": "pages/jdpayprocess/jdpayprocess",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": 5,
-					"name": "jdreim",
-					"pathName": "pages/jdreim/jdreim",
+					"name": "jdreimprocess",
+					"pathName": "pages/jdreimprocess/jdreimprocess",
 					"query": "",
 					"scene": null
 				},

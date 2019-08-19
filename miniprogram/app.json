@@ -23,6 +23,9 @@
     "pages/jdpayment/jdpayment",
     "pages/jdreimment/jdreimment",
     "pages/jdreim/jdreim",
+    "pages/jdvspprocess/jdvspprocess",
+    "pages/jdpayprocess/jdpayprocess",
+    "pages/jdreimprocess/jdreimprocess",
     "pages/cloud/cloud"
   ],
   "window": {
