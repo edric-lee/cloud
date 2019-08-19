@@ -1,4 +1,5 @@
-// pages/jdreimment/jdreimment.js
+const db = wx.cloud.database()
+const jdreimment = db.collection('jdreimment')
 Page({
 
   /**
@@ -12,7 +13,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    jdreimment.get({
+      success: res => {
+        console.log(res.data[0].list)
+        var listData = res.data[0].list
+        this.setData({
+          listData: listData
+        })
+      }
+    })
   },
 
   /**

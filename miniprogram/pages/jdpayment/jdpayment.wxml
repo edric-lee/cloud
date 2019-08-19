@@ -7,55 +7,14 @@
   <view class="step">预付单据填写步骤</view>
   <image class="reim" src="../images/jdpay.png"></image>
 </view> -->
-
 <view class="body">
-  <view class="step">步骤一</view>
-  <image class="reim1" src="../images/jdpay1.png" mode="widthFix"></image>
-  <view class="explain">
-    <text class="cont">
-  1、请按照费用“实际申请人“所在部门选择“预算部门”
-  2、请按照“部门+申请人+借款用途”格式填写“申请事由”
-例：教学管理部 陈业文 借购买手机三脚架款
-</text>
+  <view wx:for="{{listData}}" wx:key>
+    <view class="step">{{item.step}}</view>
+    <image class="reim1" src="{{item.img}}" mode="widthFix">></image>
+    <view class="explain">
+      <text class="cont">
+        {{item.content}}
+      </text>
+    </view>
   </view>
-  <view class="step">步骤二</view>
-  <image class="reim1" src="../images/jdpay2.png" mode="widthFix"></image>
-  <view class="explain">
-    <text class="cont">请按实际校区选择“教学点/办公区域”
-注意：除“北美项目部”及“雅思项目部”填选“华润大厦校区”和“国内部”填选“西大校区”外，其余部门一般填选“公共教学区”</text>
-  </view>
-  <view class="step">步骤三</view>
-  <view>
-    <image class="reim1" src="../images/jdpay3.png" mode="widthFix"></image>
-  </view>
-  <view class="explain">
-    <text class="cont">
-  请在“借款（付款）说明”填写详细借款用途及购买详情
-  </text>
-  </view>
-  <view class="step">步骤四</view>
-  <view>
-    <image class="reim1" src="../images/jdpay4.png" mode="widthFix"></image>
-  </view>
-  <view class="explain">
-    <text class="cont">
-  </text>
-  </view>
-  <view class="step">步骤五</view>
-  <image class="reim1" src="../images/jdpay5.png" mode="widthFix"></image>
-  <view class="explain"><text class="cont">1、请根据“京东慧采订单“实际金额填写“借款金额”（因直接向京东慧采进行支付款项，所以切记按订单金额实报实销，切勿按预算金额进行填写）
-  收款人：北京京东世纪信息技术有限公司
-收款人开户行：招商银行股份有限公司北京青年路支行（可直接搜索308100005545）
-收款人账号：1109 0759 7010 206
-  </text></view>
-  <view class="step">步骤六</view>
-  <image class="reim1" src="../images/jdpay6.png" mode="widthFix"></image>
-  <view class="explain"><text class="cont">
-点击确认业务
-  </text></view>
-    <view class="step">步骤七</view>
-  <image class="reim1" src="../images/jdpay7.png" mode="widthFix"></image>
-  <view class="explain"><text class="cont">
-
-  </text></view>
 </view>

@@ -24,10 +24,10 @@
                 </view>
                 <view class="text_two">
                     <view class="text_two_text">
-                        打印OA申请并标注费控单号
+                        打印验收单并标注费控单号
                     </view>
                     <view class="text_two_text">
-                        打印京东慧采订单
+                        打印京东慧采发票
                     </view>
                 </view>
                 <view class="icon_buttom">

@@ -3,3 +3,16 @@
     注意！步骤中，红框内容根据个人实际情况选择或填写，蓝框内容根据图中所示选择或填写（无需修改）！
   </i-notice-bar>
 </view>
+<!-- <view class="head">
+  <view class="step">预付单据填写步骤</view>
+  <image class="reim" src="../images/jdpay.png"></image>
+</view> -->
+<view class="body">
+  <view wx:for="{{listData}}" wx:key>
+    <view class="step">{{item.step}}</view>
+    <image class="reim1" src="{{item.img}}" mode="widthFix">></image>
+    <view class="explain">
+      <text class="cont">{{item.content}}</text>
+    </view>
+  </view>
+</view>

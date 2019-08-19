@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "i-notice-bar": "../../component/iview/notice-bar/index"
-  }
+  },
+  "navigationBarTitleText": "报销单操作步骤"
 }

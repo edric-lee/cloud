@@ -1,4 +1,5 @@
-// pages/reimbursement/reimbursement.js
+const db = wx.cloud.database()
+const jdpayment = db.collection('jdpayment')
 Page({
 
   /**
@@ -12,7 +13,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    jdpayment.get({
+      success: res => {
+        console.log(res.data[0].list)
+        var listData = res.data[0].list
+        this.setData({
+          listData: listData
+        })
+      }
+    })
   },
 
   /**

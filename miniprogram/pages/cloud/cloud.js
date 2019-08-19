@@ -10,6 +10,9 @@ const jdpay = db.collection('jdpay')
 const jdreim = db.collection('jdreim')
 const jdpayprocess = db.collection('jdpayprocess')
 const jdreimprocess = db.collection('jdreimprocess')
+const jdpayment = db.collection('jdpayment')
+const jdreimment = db.collection('jdreimment')
+
 // pages/cloud/cloud.js
 Page({
 
@@ -139,7 +142,7 @@ Page({
           img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/icon4.png?sign=16cb740c0b5d73464fd4f24223497357&t=1550559393',
           nav: '../cost/cost'
 
-        },{
+        }, {
           num: 2,
           name: '报销附件',
           img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/icon3.png?sign=7624f4735a0952c43a6f938325134c7f&t=1550559511',
@@ -149,8 +152,7 @@ Page({
           name: '京东慧采（建设中）',
           img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp.png?sign=bf70814c71fb5cfe40e28ac01ac5cb8f&t=1562914515',
           nav: ''
-        }
-      ],
+        }],
         // 为待办事项添加一个地理位置（113°E，23°N）
       },
       success(res) {
@@ -681,24 +683,21 @@ Page({
       fail: console.error
     })
   },
-  jdpayprocess: function (e) {
+  jdpayprocess: function(e) {
     jdpayprocess.add({
       data: {
         list: [{
-            name: 'OA采购申请',
-            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/OA%E7%94%B3%E8%AF%B7.png?sign=d20d31817ce650d414db5bff555450d7&t=1563431804'
-          }, {
-            name: '京东慧采订单',
-            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E6%85%A7%E9%87%87%E8%AE%A2%E5%8D%95.png?sign=80f1aa65cb0d3a614444be4342e7b169&t=1566186459'
-          }, {
-            name: '慧采订单上标注费控单号',
-            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E8%B5%84%E4%BA%A7%E5%85%A5%E5%87%BA%E5%BA%93%E7%A1%AE%E8%AE%A4%E5%8D%95%E6%A0%87%E6%B3%A8.png?sign=7bff00e8aa888792e16c86158a38603a&t=1563354261'
-          }, {
-            name: '付款单填写指南',
-            img: '../jdpayment/jdpayment'
-          }, {
-            name: '查看是否付款',
-            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E4%BB%98%E6%AC%BE.png?sign=4b18cb2e207722292787359b64a565c2&t=1563354668'
+          name: 'OA采购申请',
+          img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/OA%E7%94%B3%E8%AF%B7.png?sign=d20d31817ce650d414db5bff555450d7&t=1563431804'
+        }, {
+          name: '京东慧采订单',
+          img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E6%85%A7%E9%87%87%E8%AE%A2%E5%8D%95.png?sign=80f1aa65cb0d3a614444be4342e7b169&t=1566186459'
+        }, {
+          name: '付款单填写指南',
+          img: '../jdpayment/jdpayment'
+        }, {
+          name: '查看是否付款',
+          img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E4%BB%98%E6%AC%BE.png?sign=4b18cb2e207722292787359b64a565c2&t=1563354668'
         }]
       },
       success(res) {
@@ -707,22 +706,122 @@ Page({
       fail: console.error
     })
   },
-  jdreimprocess: function (e) {
+  jdreimprocess: function(e) {
     jdreimprocess.add({
       data: {
         list: [{
           name: '验收单',
           img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E8%B5%84%E4%BA%A7%E5%85%A5%E5%87%BA%E5%BA%93%E7%A1%AE%E8%AE%A4%E5%8D%95.png?sign=f342e0c39edcdd59e56118da806801f2&t=1563354181'
         }, {
-            name: '京东电子发票',
-            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E4%BA%AC%E4%B8%9C%E6%85%A7%E9%87%87%E5%8F%91%E7%A5%A8.png?sign=e7ce5244455b4f7eb6d42451c57bb036&t=1563354136'
-          }, {
-            name: '验收单上标注费控单号',
-            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E8%B5%84%E4%BA%A7%E5%85%A5%E5%87%BA%E5%BA%93%E7%A1%AE%E8%AE%A4%E5%8D%95%E6%A0%87%E6%B3%A8.png?sign=7bff00e8aa888792e16c86158a38603a&t=1563354261'
-          },{
-            name: '报销单填写指南',
-            img: '../jdreimment/jdreimment'
+          name: '京东电子发票',
+          img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E4%BA%AC%E4%B8%9C%E6%85%A7%E9%87%87%E5%8F%91%E7%A5%A8.png?sign=e7ce5244455b4f7eb6d42451c57bb036&t=1563354136'
+        }, {
+          name: '验收单上标注费控单号',
+          img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E8%B5%84%E4%BA%A7%E5%85%A5%E5%87%BA%E5%BA%93%E7%A1%AE%E8%AE%A4%E5%8D%95%E6%A0%87%E6%B3%A8.png?sign=7bff00e8aa888792e16c86158a38603a&t=1563354261'
+        }, {
+          name: '报销单填写指南',
+          img: '../jdreimment/jdreimment'
         }, ]
+      },
+      success(res) {
+        console.log(res)
+      },
+      fail: console.error
+    })
+  },
+  jdreimprocess: function(e) {
+    jdreimprocess.add({
+      data: {
+        list: [{
+          name: '验收单',
+          img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E8%B5%84%E4%BA%A7%E5%85%A5%E5%87%BA%E5%BA%93%E7%A1%AE%E8%AE%A4%E5%8D%95.png?sign=f342e0c39edcdd59e56118da806801f2&t=1563354181'
+        }, {
+          name: '京东电子发票',
+          img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E4%BA%AC%E4%B8%9C%E6%85%A7%E9%87%87%E5%8F%91%E7%A5%A8.png?sign=e7ce5244455b4f7eb6d42451c57bb036&t=1563354136'
+        }, {
+          name: '验收单上标注费控单号',
+          img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E8%B5%84%E4%BA%A7%E5%85%A5%E5%87%BA%E5%BA%93%E7%A1%AE%E8%AE%A4%E5%8D%95%E6%A0%87%E6%B3%A8.png?sign=7bff00e8aa888792e16c86158a38603a&t=1563354261'
+        }, {
+          name: '报销单填写指南',
+          img: '../jdreimment/jdreimment'
+        }, ]
+      },
+      success(res) {
+        console.log(res)
+      },
+      fail: console.error
+    })
+  },
+  jdpayment: function(e) {
+    jdpayment.add({
+      data: {
+        list: [{
+            step: '步骤一',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/payment/jdpay1.png?sign=e495b6e6cd6af35278cab2292538b837&t=1566190483',
+            content: '1、请按照费用"实际申请人"所在部门选择"预算部门\n2、请按照"部门+申请人+借款用途"格式填写"申请事由"\n例：教学管理部 陈业文 借购买手机三脚架款'
+          }, {
+            step: '步骤二',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/payment/jdpay2.png?sign=910a05c7c4c79086f2062771dbd16929&t=1566193740',
+            content: '请按实际校区选择“教学点/办公区域”\n注意：除"北美项目部"及"雅思项目部"填选"华润大厦校区"和"国内部"填选"西大校区"外，其余部门一般填选"公共教学区"',
+          }, {
+            step: '步骤三',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/payment/jdpay3.png?sign=a9cf55ce25db6719741a6efe01ee6ed9&t=1566193862',
+            content: '请在“借款（付款）说明”填写详细借款用途及购买详情',
+          }, {
+            step: '步骤四',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/payment/jdpay4.png?sign=d8f9d497d754a3d35b882f7fba723462&t=1566193906',
+          }, {
+            step: '步骤五',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/payment/jdpay5.png?sign=f55d7675107a618695f4d014f712f2dc&t=1566193969',
+            content: '1、请根据"京东慧采订单"实际金额填写"借款金额"（因直接向京东慧采进行支付款项，所以切记按订单金额实报实销，切勿按预算金额进行填写）\n收款人：北京京东世纪信息技术有限公司\n收款人开户行：招商银行股份有限公司北京青年路支行（可直接搜索308100005545）\n收款人账号：1109 0759 7010 206',
+          },
+          {
+            step: '步骤六',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/payment/jdpay6.png?sign=ae6ae09d54101fc9cca41ebe01f8db47&t=1566194099',
+            content: '点击确认业务',
+          },
+          {
+            step: '步骤七',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/payment/jdpay7.png?sign=b7fac0485abad0e3258199e952e10a68&t=1566194141',
+          },
+        ]
+      },
+      success(res) {
+        console.log(res)
+      },
+      fail: console.error
+    })
+  },
+  jdreimment: function(e) {
+    jdreimment.add({
+      data: {
+        list: [{
+            step: '步骤一',
+          img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/reimment/jdreim1.png?sign=dc993f20a96d49f10e5e2860d0bbb16d&t=1566195035',
+          content: ' 1、选择需要冲销的借款人\n2、据实填写预算部门\n3、报销事由填写“冲销+冲销借款事由”；报销说明填写“冲销+借款人 + 借款共 **** 元”'
+          }, {
+            step: '步骤二',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/reimment/jdreim2.png?sign=17a6e36f0638abd56ece93be0d308f0b&t=1566195073',
+            content: '据实选择教学点/办公区（无指定教学区请选择“公共教学区”）',
+          }, {
+            step: '步骤三',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/reimment/jdreim3.png?sign=0057df62756ca54d99aa6b41ec1a9a13&t=1566195084',
+            content: '1、请根据小程序中“财务流程”—“费控流程”—“费用分类”引导完成选择\n2、据实填写“预算部门”及“教学点”',
+          }, {
+            step: '步骤四',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/reimment/jdreim4.png?sign=248f15e6bd214acf1246c6f55e76c0ef&t=1566195095',
+            content:'点击“确认业务明细填写完毕”'
+          }, {
+            step: '步骤五',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/reimment/jdreim5.png?sign=2c6686bda9543d4e492728a2c545fcfd&t=1566195108',
+            content: ' 1、填写“填单人”的银行转账信息\n2、收款金额请一定填写“0”，切记\n3、请选择并添加需要冲销的“借款申请单”\n4、填写“本次报销冲抵金额”（冲抵金额=借款金额）',
+          },
+          {
+            step: '步骤六',
+            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/reimment/jdreim6.png?sign=0d9b32438cac0005ad31dfa64dd57ffa&t=1566195119',
+            content: '填写“业务实际发生”并点击顶部“提交”',
+          },
+        ]
       },
       success(res) {
         console.log(res)

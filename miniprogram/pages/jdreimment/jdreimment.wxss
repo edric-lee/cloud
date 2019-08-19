@@ -1,1 +1,31 @@
-/* pages/jdreimment/jdreimment.wxss */
+.step{
+    margin-top: 5px;
+    width: 100%;
+    color: white;
+    background: linear-gradient(#2193b0, #2193b0);
+    font-size: 20px;
+    text-align: center;
+  }
+  .body{
+    /* background: linear-gradient(#2193b0, #2193b0); */
+  }
+  .reim{
+    background-size: cover;
+    background:no-repeat;
+    width: 100%;
+  }
+  .reim1{
+  
+    background-size: cover;
+    background:no-repeat;
+    background-position: 50% 50%;
+    width: 100%;
+  }
+  .explain{
+    width: 95%;
+    margin: 10px auto;
+  }
+  .cont{
+     line-height:20px;
+  }
+  

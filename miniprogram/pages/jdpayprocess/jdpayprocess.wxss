@@ -2,17 +2,17 @@
     width: 90%;
     margin: auto;
     margin-top: 2%;
-    border: 1px solid #E54B4B;
+    border: 1px solid #32B67A;
 }
 .head{
     height: 10%;
     width: 100%;
-    border-bottom: 1px solid #E54B4B;
+    border-bottom: 1px solid #32B67A;
     display: flex;
     align-items: center;
     justify-content: center;  
     font-size: 60rpx;
-    background-color: #E54B4B;
+    background-color: #32B67A;
     color: white;
 }
 .body{
@@ -23,13 +23,13 @@
 .left{
     width: 12%;
     height: 100%;
-    border-right: 1px solid #E54B4B;
-    color: #E54B4B;
+    border-right: 1px solid #32B67A;
+    color: #32B67A;
 }
 .mid{
     width: 88%; 
     height: 100%;
-    border-right: 1px solid #E54B4B;
+    border-right: 1px solid #32B67A;
 }
 
 .title{
@@ -39,7 +39,7 @@
     align-items: center;
     justify-content: center;  
     font-size: 40rpx;
-    color: #E54B4B;
+    color: #32B67A;
 }
 .left_title{
     width: 100%;
@@ -53,13 +53,13 @@
 .content{
     width: 100%;
     height: 18.4%;
-    border-top: 1px solid #E54B4B;
+    border-top: 1px solid #32B67A;
     
 }
 .left_content{
     width: 100%;
     height: 18.4%;
-    border-top: 1px solid #E54B4B;
+    border-top: 1px solid #32B67A;
     writing-mode: vertical-lr;
     display: flex;
     align-items: center;
@@ -74,7 +74,7 @@
     align-items: center;
     justify-content: center;  
     font-size: 30rpx;
-    background-color: #E54B4B;
+    background-color: #32B67A;
     color: white;
     text-align: center;
 }
@@ -87,13 +87,13 @@
 .text_two_text{
     height: 100%;
     width: 40%;
-    border: 1px solid #E54B4B;
+    border: 1px solid #32B67A;
     display: flex;
     align-items: center;
     justify-content: center;  
     font-size: 30rpx;
     text-align: center;
-    background-color: #E54B4B;
+    background-color: #32B67A;
     color: white; 
 }
 .icon_top{
@@ -109,17 +109,17 @@
     justify-content: center; 
 }
 .icon-refresharrow{
-    color: #E54B4B;
+    color: #32B67A;
 }
 .content3{
     width: 100%;
     height: 36.8%;
-    border-top: 1px solid #E54B4B;   
+    border-top: 1px solid #32B67A;   
 }
 .left_content3{
     width: 100%;
     height: 36.8%;
-    border-top: 1px solid #E54B4B;
+    border-top: 1px solid #32B67A;
     writing-mode: vertical-lr;
     display: flex;
     align-items: center;
@@ -146,7 +146,7 @@
     align-items: center;
     justify-content: center;  
     font-size: 30rpx;
-    background-color: #E54B4B;
+    background-color: #32B67A;
     color: white;
     text-align: center;
 }

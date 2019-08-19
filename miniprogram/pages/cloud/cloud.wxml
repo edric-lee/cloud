@@ -10,4 +10,6 @@
 <button bindtap='jdreim'>jdreim</button>
 <button bindtap='jdpayprocess'>jdpayprocess</button>
 <button bindtap='jdreimprocess'>jdreimprocess</button>
+<button bindtap='jdpayment'>jdpayment</button>
+<button bindtap='jdreimment'>jdreimment</button>
 <!-- <button bindtap='del'>del</button> -->

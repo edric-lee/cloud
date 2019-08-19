@@ -28,7 +28,7 @@
                 </view>
                 <view class="text_two">
                     <view class="text_two_text">
-                        打印OA申请
+                        打印OA申请并备注单号
                     </view>
                     <view class="text_two_text">
                         打印京东慧采订单
