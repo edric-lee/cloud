@@ -1771,7 +1771,7 @@ button.icon.lg {
   margin-left: 0.5em;
 }
 
-.cu-bar .content {
+.cu-bar .cu-content {
   position: absolute;
   text-align: center;
   width: 400rpx;

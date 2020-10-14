@@ -12,6 +12,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      modalName:"Modal",
+    })
     wx.getSystemInfo({
       success: res => {
         //导航高度
@@ -33,6 +36,12 @@ Page({
   pay:function(){
     wx.navigateTo({
       url: '../jdpayprocess/jdpayprocess'
+    })
+  },
+  hideModal(e) {
+    this.setData({
+      modalName: null,
+
     })
   },
   /**

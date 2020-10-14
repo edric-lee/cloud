@@ -1,6 +1,6 @@
 
 <view class="main" style="height: {{winH*0.98}}px">
-    <view class="head">
+    <view class="head" bindtap="showModal" data-target="Modal">
         财务付款流程
     </view>
     <view class="body" bindtap="powerDrawer" data-statu="open">
@@ -87,12 +87,9 @@
                 <view class="text">
                 <view class="text_mar">
                 <text>
-                    出纳张文静付款\n（校长审批后次日18:00前）
+                    出纳黄丽霞付款\n（校长审批后次日18:00前）
                     </text>
                     </view>
-                </view>
-                <view class="icon_buttom">
-                    <text class='icon-refresharrow'></text>
                 </view>
             </view>
         </view>
@@ -123,5 +120,19 @@
       {{item.name}}
     </view>
 
+  </view>
+</view>
+
+<view class="cu-modal {{modalName=='Modal'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="cu-content">注意</view>
+      <view class="action" bindtap="hideModal">
+        <text class="icon-roundclose text-green"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      点击流程图可查看详情
+    </view>
   </view>
 </view>

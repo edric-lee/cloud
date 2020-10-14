@@ -6,19 +6,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-    flag:true
+    flag:true,
+    modalName: null,
+    // modalName:Modal
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      modalName:"Modal",
+    })
     jdpayprocess.get({
       success: res => {
         console.log(res.data[0].list)
         var listData = res.data[0].list
         this.setData({
-          listData: listData
+          listData: listData,
+
+
         })
       }
     })
@@ -27,10 +34,8 @@ Page({
         //导航高度
         this.setData({
           winH:res.windowHeight,
-          winW:res.windowWidth
-        })
-
-        
+          winW:res.windowWidth,        })
+      
       }, fail(err) {
         console.log(err);
       }
@@ -117,8 +122,9 @@ Page({
 
   hideModal(e) {
     this.setData({
+      modalName: null,
       showModal: false,
       flag: true
     })
-  }
+  },
 })

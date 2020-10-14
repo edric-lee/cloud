@@ -6,7 +6,18 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"appid": "wx4396fae2c57db290",
 	"projectname": "cloud",
@@ -27,6 +38,10 @@
 			"list": []
 		},
 		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
 			"list": []
 		},
 		"miniprogram": {
@@ -81,8 +96,8 @@
 				},
 				{
 					"id": 7,
-					"name": "pay",
-					"pathName": "pages/jdpay/jdpay",
+					"name": "account",
+					"pathName": "pages/account/account",
 					"query": "",
 					"scene": null
 				},

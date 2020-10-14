@@ -17,7 +17,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    if (wx.getStorageSync('openid') == "o7OsQ5ZguMk306fh4Pxv_qtccbDE") {
+    if (wx.getStorageSync('openid') == "o7OsQ5ZguMk306fh4Pxv_qtccbDE"||wx.getStorageSync('openid') == "o7OsQ5QxUGHuPSk0bOgv2PIj-Sg8") {
       this.setData({
         showOrHidden: true
       })
@@ -98,6 +98,33 @@ Page({
               content: msg.substring(msg.indexOf("分") + 1, msg.indexOf("收入人民币")), //内容
               money: msg.substring(msg.indexOf("收入人民币") + 5, msg.indexOf("元，余额")), //金额
               accountName: msg.substring(msg.indexOf("对方户名:") + 5, msg.indexOf("。[建设银行]")) //对方户名
+            }
+          }).then(res => {
+            console.log(res)
+          }).catch(err => {
+            console.error(err)
+          })
+        }
+      })
+    }
+  },
+  bindFormSubmit_zs: function(e) {
+    var msg = e.detail.value.textarea_zs
+    console.log(msg.substring(msg.indexOf("收到人民币")+5 , msg.indexOf(",余额")).replace(",",""))
+    console.log(msg.substring(msg.indexOf("到账通知：于") + 6, msg.indexOf("收到人")))
+    if (this.data.employee.indexOf(msg.substring(msg.indexOf(" ",40) , msg.indexOf(",账号"))) == -1) { //员工不提交
+      var countNum = bank.where({
+        time: msg.substring(msg.indexOf("到账通知：于") + 6, msg.indexOf("收到人") ),//时间
+        money: msg.substring(msg.indexOf("收到人民币")+5 , msg.indexOf(",余额")).replace(",",""),//金额
+        accountName: msg.substring(msg.indexOf(" ",40)+1 , msg.indexOf(",账号"))//对方户名
+      }).count().then(res => {
+        if (res.total == 0) { //重复不提交
+          bank.add({
+            data: {
+              time: msg.substring(msg.indexOf("到账通知：于") + 6, msg.indexOf("收到人") ), //时间
+              content: msg.substring(msg.indexOf("分") + 1, msg.indexOf("收入人民币")), //内容
+              money: msg.substring(msg.indexOf("收到人民币")+5 , msg.indexOf(",余额")).replace(",",""), //金额
+              accountName: msg.substring(msg.indexOf(" ",40)+1 , msg.indexOf(",账号")) //对方户名
             }
           }).then(res => {
             console.log(res)

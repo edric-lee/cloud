@@ -624,8 +624,8 @@ Page({
             name: '京东慧采订单',
             url: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E8%B5%84%E4%BA%A7%E5%85%A5%E5%87%BA%E5%BA%93%E7%A1%AE%E8%AE%A4%E5%8D%95%E6%A0%87%E6%B3%A8.png?sign=7bff00e8aa888792e16c86158a38603a&t=1563354261'
           }, {
-            name: '慧采订单上标注费控单号',
-            img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E8%B5%84%E4%BA%A7%E5%85%A5%E5%87%BA%E5%BA%93%E7%A1%AE%E8%AE%A4%E5%8D%95%E6%A0%87%E6%B3%A8.png?sign=7bff00e8aa888792e16c86158a38603a&t=1563354261'
+            name: 'OA申请标注费控单号',
+              img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/OA%E5%A1%AB%E5%86%99%E8%B4%B9%E6%8E%A7%E5%8D%95%E5%8F%B7.jpg?sign=0559b2c9607402a13faf6c56b033ed28&t=1566268427'
           }]
         }, {
           matter: '四、查看付款进程',
@@ -688,7 +688,7 @@ Page({
       data: {
         list: [{
           name: 'OA采购申请',
-          img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/OA%E7%94%B3%E8%AF%B7.png?sign=d20d31817ce650d414db5bff555450d7&t=1563431804'
+          img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/OA%E5%A1%AB%E5%86%99%E8%B4%B9%E6%8E%A7%E5%8D%95%E5%8F%B7.jpg?sign=0559b2c9607402a13faf6c56b033ed28&t=1566268427'
         }, {
           name: '京东慧采订单',
           img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E6%85%A7%E9%87%87%E8%AE%A2%E5%8D%95.png?sign=80f1aa65cb0d3a614444be4342e7b169&t=1566186459'
@@ -734,14 +734,11 @@ Page({
       data: {
         list: [{
           name: '验收单',
-          img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E8%B5%84%E4%BA%A7%E5%85%A5%E5%87%BA%E5%BA%93%E7%A1%AE%E8%AE%A4%E5%8D%95.png?sign=f342e0c39edcdd59e56118da806801f2&t=1563354181'
+          img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E8%B5%84%E4%BA%A7%E5%85%A5%E5%87%BA%E5%BA%93%E7%A1%AE%E8%AE%A4%E5%8D%95%E6%A0%87%E6%B3%A8.png?sign=7bff00e8aa888792e16c86158a38603a&t=1563354261'
         }, {
           name: '京东电子发票',
           img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E4%BA%AC%E4%B8%9C%E6%85%A7%E9%87%87%E5%8F%91%E7%A5%A8.png?sign=e7ce5244455b4f7eb6d42451c57bb036&t=1563354136'
-        }, {
-          name: '验收单上标注费控单号',
-          img: 'https://6669-finance-059fa2-1258372440.tcb.qcloud.la/images/jdvsp/%E8%B5%84%E4%BA%A7%E5%85%A5%E5%87%BA%E5%BA%93%E7%A1%AE%E8%AE%A4%E5%8D%95%E6%A0%87%E6%B3%A8.png?sign=7bff00e8aa888792e16c86158a38603a&t=1563354261'
-        }, {
+        },  {
           name: '报销单填写指南',
           img: '../jdreimment/jdreimment'
         }, ]

@@ -13,6 +13,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      modalName:"Modal",
+    })
     jdreimprocess.get({
       success: res => {
         console.log(res.data[0].list)
@@ -118,7 +121,9 @@ Page({
   hideModal(e) {
     this.setData({
       showModal: false,
-      flag: true
+      flag: true,
+      modalName: null,
+
     })
   }
 })

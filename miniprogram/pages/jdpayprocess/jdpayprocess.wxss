@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: center;  
     font-size: 60rpx;
-    background-color: #32B67A;
+    background: #32B67A;
     color: white;
 }
 .body{
@@ -74,9 +74,11 @@
     align-items: center;
     justify-content: center;  
     font-size: 30rpx;
-    background-color: #32B67A;
+    background: #32B67A ;
+    box-shadow: 0rpx 40rpx 100rpx 0rpx rgba(0, 0, 0, 0.07);
     color: white;
     text-align: center;
+    border-radius: 3px;
 }
 .text_two{
     height: 60%;
@@ -87,14 +89,15 @@
 .text_two_text{
     height: 100%;
     width: 40%;
-    border: 1px solid #32B67A;
     display: flex;
     align-items: center;
     justify-content: center;  
     font-size: 30rpx;
     text-align: center;
-    background-color: #32B67A;
+    background:#32B67A;
     color: white; 
+    border-radius: 3px;
+    box-shadow: 0rpx 40rpx 100rpx 0rpx rgba(0, 0, 0, 0.07);
 }
 .icon_top{
     height: 20%;
@@ -146,9 +149,11 @@
     align-items: center;
     justify-content: center;  
     font-size: 30rpx;
-    background-color: #32B67A;
+    background: #32B67A;
+    box-shadow: 0rpx 40rpx 100rpx 0rpx rgba(0, 0, 0, 0.07);
     color: white;
     text-align: center;
+    border-radius: 5px;
 }
 .text_mar{
     margin-top: -10px;
@@ -162,7 +167,7 @@
     right: 0;
     bottom: 0;
     /* left: 5%; */
-    border-radius: 5rpx;
+    border-radius: 3px;
   
   }
   .modalImg {

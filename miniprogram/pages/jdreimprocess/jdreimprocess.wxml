@@ -106,3 +106,17 @@
 
   </view>
 </view>
+
+<view class="cu-modal {{modalName=='Modal'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="cu-content">注意</view>
+      <view class="action" bindtap="hideModal">
+        <text class="icon-roundclose text-green"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      点击流程图可查看详情
+    </view>
+  </view>
+</view>

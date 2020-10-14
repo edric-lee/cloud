@@ -50,7 +50,7 @@
                 <view class="icon_top">
                     <text class='icon-refresharrow'></text>
                 </view>
-                <view class="text" style="background-color: #32B67A;text-decoration:underline">
+                <view class="text" style="background-color: #32B67A;">
                    
                     财务付款
                     
@@ -79,7 +79,7 @@
                 <view class="icon_top">
                     <text class='icon-refresharrow'></text>
                 </view>
-                <view class="text" style="background-color: #32B67A;text-decoration:underline">
+                <view class="text" style="background-color: #32B67A;">
                     财务报销
                 </view>
                 <view class="icon_buttom">
@@ -133,4 +133,18 @@
             </view>
         </view>
     </view>
+</view>
+
+<view class="cu-modal {{modalName=='Modal'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="cu-content">注意</view>
+      <view class="action" bindtap="hideModal">
+        <text class="icon-roundclose text-green"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      点击“财务付款”和“财务报销”可查看详情
+    </view>
+  </view>
 </view>
